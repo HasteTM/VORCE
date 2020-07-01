@@ -1,12 +1,12 @@
 {
-  "name": "Ascendency",
+  "name": "ascendency",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
     "ascii": "^1.0.0",
     "ascii-table": "0.0.9",
     "common-tags": "^1.8.0",
-    "discord.js": "^11.6.1",
+    "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "fortnite": "^4.3.2",
     "node-fetch": "^2.6.0",
@@ -18,5 +18,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "A Discord BOT"
 }
