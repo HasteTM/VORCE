@@ -1,9 +1,11 @@
 {
-  "name": "myapp",
-  "description": "a really cool app",
+  "name": "arrowbot2",
   "version": "1.0.0",
-  "engines": {
-    "node": "6.11.1"
+  "main": "index.js",
+  "dependencies": {
+    "ascii": "^1.0.0",
+    "ascii-table": "0.0.9",
+    "node": "12.18.0",
     "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
@@ -13,7 +15,23 @@
     "node-fetch": "^2.6.0",
     "random-puppy": "^1.1.0",
     "superagent": "^5.2.2"
-    "ascii": "^1.0.0",
-    "ascii-table": "0.0.9",
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Entety101/MY-HEROKU-HOSTED-BOT.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Entety101/MY-HEROKU-HOSTED-BOT/issues"
+  },
+  "homepage": "https://github.com/Entety101/MY-HEROKU-HOSTED-BOT#readme",
+  "description": ""
+
+
 }
