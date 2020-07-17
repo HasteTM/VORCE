@@ -34,7 +34,7 @@ client.on("ready", () => {
 
         game: {
 
-            name: "Ascendency Client",
+            name: "!!help | Haste Bot",
 
             type: "PLAYING"
 
