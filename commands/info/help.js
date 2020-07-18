@@ -14,15 +14,16 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-        .setColor('#2003fc')
-        .setAuthor('Commands', 'https://cdn.discordapp.com/attachments/651589704772485131/725457453772439562/kindpng_1214421.png')
-        .addField('**Avatar**','__Sends a users avatar.__')
-        .addField('**Serverinfo**','__Sends info about the Server.__')
-        .addField('**Status**','__Sends the current status of the Bot.__')
-        .addField('**Whois**','__Sends information about a user.__')
-        .addField('**Ban**','__Bans a user.__')
-        .addField('**Kick**','__Kicks a user.__',)
-        .addField('**Purge**', '__Clears the chat.__')
+        .setColor('#01000a')
+        .setAuthor('Commands', 'https://cdn.discordapp.com/attachments/733865554997411926/733866032598482954/png-transparent-exclamation-mark-computer-icons-interjection-question-mark-exclamation-point-monochr.png')
+        .addField('❗️  Avatar','Sends a users avatar.')
+        .addField('❗️  Serverinfo','Sends info about the Server.')
+        .addField('❗️  Status','Sends the current status of the Bot.')
+        .addField('❗️  Whois','Sends information about a user.')
+        .addField('❗️  Instagram', 'Shows a users instagram')
+        .addField('🔐  Ban','Bans a user.')
+        .addField('🔐  Kick','Kicks a user.',)
+        .addField('🔐  Purge', 'Clears the chat.')
 
         message.channel.send(embed);
 

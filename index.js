@@ -34,7 +34,7 @@ client.on("ready", () => {
 
         game: {
 
-            name: "!!help | Haste Bot",
+            name: "$help | Haste BOT",
 
             type: "PLAYING"
 
@@ -46,7 +46,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 
-    const prefix = "!!";
+    const prefix = "$";
 
     if (message.author.bot) return;
 

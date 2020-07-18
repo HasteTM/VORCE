@@ -35,7 +35,7 @@ module.exports = {
 
             .setThumbnail(member.user.displayAvatarURL)
 
-            .setColor('#2003fc')
+            .setColor('#01000a')
 
             .addField('Member information:', stripIndents`** Display name:** ${member.displayName}
 

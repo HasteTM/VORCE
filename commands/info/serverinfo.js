@@ -1,4 +1,3 @@
-
 const { RichEmbed } = require("discord.js");
 
 
@@ -15,7 +14,7 @@ module.exports = {
         const embed = new RichEmbed()
 
     .setDescription("Server Information")
-    .setColor("#2003fc")
+    .setColor("#01000a")
     .setThumbnail(message.guild.iconURL)
     .addField("Server Name", message.guild.name)
     .addField("Created On", message.guild.createdAt)

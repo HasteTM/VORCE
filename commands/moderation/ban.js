@@ -81,7 +81,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-            .setColor("#2003fc")
+            .setColor("#01000a")
             
             .setImage('https://cdn.discordapp.com/attachments/713938341116117025/725462324214759575/giphy.gif')
 
@@ -95,7 +95,7 @@ module.exports = {
 
         const promptEmbed = new RichEmbed()
 
-            .setColor("#2003fc")
+            .setColor("#01000a")
 
             .setAuthor(`This verification becomes invalid after 30 minutes.`)
 
