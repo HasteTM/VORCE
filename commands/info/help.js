@@ -21,6 +21,7 @@ module.exports = {
         .addField('❗️  Status','Sends the current status of the Bot.')
         .addField('❗️  Whois','Sends information about a user.')
         .addField('🎉  Meme', 'Sends a random meme.')
+        .addField('✅  Status', 'Shows the current status of the Bot.')
         .addField('✅  Invite', 'Sends the bot invite link.')
         .addField('🔐  Say', 'Says a message.')
         .addField('🔐  Ban','Bans a user.')
