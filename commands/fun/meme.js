@@ -15,7 +15,7 @@ module.exports = {
         // Get a random image from the subreddit page
         const img = await randomPuppy(random);
         const embed = new RichEmbed()
-            .setColor("RANDOM")
+            .setColor("#01000a")
             .setImage(img)
             .setTitle(`From /r/${random}`)
             .setURL(`https://reddit.com/r/${random}`);
