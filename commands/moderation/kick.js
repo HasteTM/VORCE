@@ -93,6 +93,8 @@ module.exports = {
         const promptEmbed = new RichEmbed()
 
             .setColor("#01000a")
+            
+            .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
             .setAuthor(`This verification becomes invalid after 30 seconds.`)
 

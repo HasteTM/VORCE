@@ -16,6 +16,7 @@ module.exports = {
     .setDescription("Server Information")
     .setColor("#01000a")
     .setThumbnail(message.guild.iconURL)
+    .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
     .addField("Server Name", message.guild.name)
     .addField("Created On", message.guild.createdAt)
     .addField("You Joined", message.member.joinedAt)

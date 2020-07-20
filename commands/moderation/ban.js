@@ -83,11 +83,12 @@ module.exports = {
 
             .setColor("#01000a")
             
-            .setImage('https://cdn.discordapp.com/attachments/713938341116117025/725462324214759575/giphy.gif')
+            .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
             .setTimestamp()
-
+            
             .setDescription(stripIndents`** Banned member:** ${toBan} (${toBan.id})
+
 
             ** Banned by:** ${message.member} (${message.member.id})
 

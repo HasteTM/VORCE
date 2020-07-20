@@ -31,27 +31,26 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-            .setFooter(member.displayName, member.user.displayAvatarURL)
 
             .setThumbnail(member.user.displayAvatarURL)
 
             .setColor('#01000a')
 
-            .addField('Member information:', stripIndents`** Display name:** ${member.displayName}
+            .addField('Member information:', stripIndents` Display name: ${member.displayName}
 
-            ** Joined at:** ${joined}
+             Joined at: ${joined}
 
-            ** Roles:** ${roles}`, true)
+             Roles: ${roles}`, true)
 
-            .addField('User information:', stripIndents`** ID:** ${member.user.id}
+            .addField('User information:', stripIndents` ID: ${member.user.id}
 
-            ** Username**: ${member.user.username}
+             Username: ${member.user.username}
 
-            ** Tag**: ${member.user.tag}
+             Tag: ${member.user.tag}
 
-            ** Created at**: ${created}`, true)
+             Created at: ${created}`, true)
+            .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
-            .setTimestamp()
 
         if (member.user.presence.game) 
 
