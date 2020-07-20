@@ -14,6 +14,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 
+        .setAuthor('invite', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setColor("#01000a")
         .setTitle("Click to invite Haste Bot!")
         .setThumbnail('https://cdn.discordapp.com/avatars/733774256940515349/73143418d7c393e9e4f636e10af7d90b.png?size=2048')

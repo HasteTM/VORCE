@@ -16,7 +16,7 @@ module.exports = {
 
         .setColor('#01000a')
         .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
-        .setAuthor('Commands', 'https://cdn.discordapp.com/attachments/733865554997411926/733866032598482954/png-transparent-exclamation-mark-computer-icons-interjection-question-mark-exclamation-point-monochr.png')
+        .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .addField('❗️  Avatar','Sends a users avatar.')
         .addField('❗️  Serverinfo','Sends info about the Server.')
         .addField('❗️  Whois','Sends information about a user.')

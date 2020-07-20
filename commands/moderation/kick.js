@@ -22,7 +22,7 @@ module.exports = {
 
         if (!args[0]) {
 
-            return message.reply("Please provide a person to kick.")
+            return message.reply(" ⚠️ Please provide a person to kick.")
 
                 .then(m => m.delete(5000));
 
@@ -30,7 +30,7 @@ module.exports = {
 
         if (!args[1]) {
 
-            return message.reply("Please provide a reason to kick.")
+            return message.reply(" ⚠️ Please provide a reason to kick.")
 
                 .then(m => m.delete(5000));
 
@@ -38,7 +38,7 @@ module.exports = {
 
         if (!message.member.hasPermission("KICK_MEMBERS")) {
 
-            return message.reply("❌ You do not have permissions to kick members. Please contact a staff member")
+            return message.reply(" ❌ You don't have permissions to use this command.")
 
                 .then(m => m.delete(5000));
 
@@ -46,7 +46,7 @@ module.exports = {
 
         if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
 
-            return message.reply("❌ I do not have permissions to kick members. Please contact a staff member")
+            return message.reply(" ❌ Bot does not have permissions to kick members.")
 
                 .then(m => m.delete(5000));
 
@@ -56,7 +56,7 @@ module.exports = {
 
         if (!toKick) {
 
-            return message.reply("Couldn't find that member, try again")
+            return message.reply(" ⚠️ Couldn't find that member, try again")
 
                 .then(m => m.delete(5000));
 
@@ -64,7 +64,7 @@ module.exports = {
 
         if (toKick.id === message.author.id) {
 
-            return message.reply("You can't kick yourself...")
+            return message.reply(" ⚠️ You can't kick yourself.")
 
                 .then(m => m.delete(5000));
 
@@ -72,7 +72,7 @@ module.exports = {
 
         if (!toKick.kickable) {
 
-            return message.reply("I can't kick that person due to role hierarchy, I suppose.")
+            return message.reply(" ⚠️ I can't kick that member due to role hierarchy.")
 
                 .then(m => m.delete(5000));
 
@@ -96,7 +96,7 @@ module.exports = {
 
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
-            .setAuthor(`This verification becomes invalid after 30 seconds.`)
+            .setAuthor(`This verification becomes invalid after 30 seconds.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
             .setDescription(`Do you want to kick ${toKick}?`)
 
@@ -112,7 +112,7 @@ module.exports = {
 
                     .catch(err => {
 
-                        if (err) return message.channel.send(`Well.... the kick didn't work out. Here's the error ${err}`)
+                        if (err) return message.channel.send(`Error Kick |  ${err}`)
 
                     });
 
@@ -122,7 +122,7 @@ module.exports = {
 
                 msg.delete();
 
-                message.reply(`Kick canceled.`)
+                message.reply(`⚠️ Canceled Kick`)
 
                     .then(m => m.delete(10000));
 
