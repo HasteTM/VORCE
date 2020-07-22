@@ -81,12 +81,13 @@ module.exports = {
 
         const embed = new RichEmbed()
 
+            .setAuthor('Ban', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
             .setColor("#01000a")
             
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
             .setDescription(stripIndents`** Banned member:** ${toBan} (${toBan.id})
-
 
             ** Banned by:** ${message.member} (${message.member.id})
 

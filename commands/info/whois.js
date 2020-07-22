@@ -30,8 +30,8 @@ module.exports = {
         const created = formatDate(member.user.createdAt);
 
         const embed = new RichEmbed()
-
-.setAuthor('Whois', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+// fix embeds later
+            .setAuthor('Whois', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
             .setThumbnail(member.user.displayAvatarURL)
 
             .setColor('#01000a')
