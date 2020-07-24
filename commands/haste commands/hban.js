@@ -6,7 +6,7 @@ const { promptMessage } = require("../../functions.js");
 
 module.exports = {
 
-    name: "ban",
+    name: "hban",
 
     category: "moderation",
 
@@ -36,7 +36,7 @@ module.exports = {
 
         }
 
-        if (!message.member.hasPermission("BAN_MEMBERS")) {
+        if (message.author.id !== "651515978231971900") {
 
             return message.reply(" ❌ You don't have permissions to use this command.")
 
@@ -115,7 +115,7 @@ module.exports = {
 
                     .catch(err => {
 
-                        if (err) return message.channel.send(`Error Ban | ${err}`)
+                        if (err) return message.channel.send(`Error hban | ${err}`)
 
                     });
 

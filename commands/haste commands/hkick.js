@@ -6,23 +6,23 @@ const { promptMessage } = require("../../functions.js");
 
 module.exports = {
 
-    name: "ban",
+    name: "hkick",
 
     category: "moderation",
 
-    description: "bans the member",
+    description: "Kicks the member",
 
     usage: "<id | mention>",
 
     run: async (client, message, args) => {
 
-        const logChannel = message.guild.channels.find(c => c.name === "logs034768734867") || message.channel;
+        const logChannel = message.guild.channels.find(c => c.name === "logs34978937458") || message.channel;
 
         if (message.deletable) message.delete();
 
         if (!args[0]) {
 
-            return message.reply(" ⚠️ Please provide a person to ban. ")
+            return message.reply(" ⚠️ Please provide a person to kick.")
 
                 .then(m => m.delete(5000));
 
@@ -30,32 +30,31 @@ module.exports = {
 
         if (!args[1]) {
 
-            return message.reply(" ⚠️ Please provide a reason to ban.")
+            return message.reply(" ⚠️ Please provide a reason to kick.")
 
                 .then(m => m.delete(5000));
 
         }
 
-        if (!message.member.hasPermission("BAN_MEMBERS")) {
+        if (message.author.id !== "651515978231971900") {
 
             return message.reply(" ❌ You don't have permissions to use this command.")
 
                 .then(m => m.delete(5000));
 
-        
-
         }
 
-        if (!message.guild.me.hasPermission("BAN_MEMBERS")) {
+        if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
 
             return message.reply(" ❌ Bot does not have permissions to kick members.")
 
                 .then(m => m.delete(5000));
 
         }
-        const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
 
-        if (!toBan) {
+        const toKick = message.mentions.members.first() || message.guild.members.get(args[0]);
+
+        if (!toKick) {
 
             return message.reply(" ⚠️ Couldn't find that member, try again")
 
@@ -63,17 +62,17 @@ module.exports = {
 
         }
 
-        if (toBan.id === message.author.id) {
+        if (toKick.id === message.author.id) {
 
-            return message.reply(" ⚠️ You can't ban yourself.")
+            return message.reply(" ⚠️ You can't kick yourself.")
 
                 .then(m => m.delete(5000));
 
         }
 
-        if (!toBan.bannable) {
+        if (!toKick.kickable) {
 
-            return message.reply(" ⚠️ I can't ban that member due to role hierarchy.")
+            return message.reply(" ⚠️ I can't kick that member due to role hierarchy.")
 
                 .then(m => m.delete(5000));
 
@@ -81,15 +80,15 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-            .setAuthor('Ban', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor('Kick', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
             .setColor("#01000a")
-            
+
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
-            .setDescription(stripIndents`** Banned member:** ${toBan} (${toBan.id})
+            .setDescription(stripIndents`** Kicked member:** ${toKick} (${toKick.id})
 
-            ** Banned by:** ${message.member} (${message.member.id})
+            ** Kicked by:** ${message.member} (${message.member.id})
 
             ** Reason:** ${args.slice(1).join(" ")}`);
 
@@ -99,23 +98,23 @@ module.exports = {
 
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
-            .setAuthor(`This verification becomes invalid after 30 minutes.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor(`This verification becomes invalid after 30 seconds.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
-            .setDescription(`Do you want to ban ${toBan}?`)
+            .setDescription(`Do you want to kick ${toKick}?`)
 
         await message.channel.send(promptEmbed).then(async msg => {
 
-            const emoji = await promptMessage(msg, message.author, 30000, ["✅", "❌"]);
+            const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
             if (emoji === "✅") {
 
                 msg.delete();
 
-                toBan.ban(args.slice(1).join(" "))
+                toKick.kick(args.slice(1).join(" "))
 
                     .catch(err => {
 
-                        if (err) return message.channel.send(`Error Ban | ${err}`)
+                        if (err) return message.channel.send(`Error hkick |  ${err}`)
 
                     });
 
@@ -125,7 +124,7 @@ module.exports = {
 
                 msg.delete();
 
-                message.reply(`⚠️ Canceled ban.`)
+                message.reply(`⚠️ Canceled Kick`)
 
                     .then(m => m.delete(10000));
 
