@@ -19,6 +19,7 @@ module.exports = {
         .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .addField('❗️  Avatar','Sends a users avatar.')
         .addField('❗️  Serverinfo','Sends info about the Server.')
+        .addField('❗️  Guilds','Shows how many servers the bot is in.')
         .addField('❗️  Whois','Sends information about a user.')
         .addField('🎉  Meme', 'Sends a random meme.')
         .addField('✅  Status', 'Shows the current status of the Bot.')
