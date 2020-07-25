@@ -34,7 +34,7 @@ client.on("ready", () => {
 
         game: {
 
-            name: "h!help | Haste BOT",
+            name: "v!help | Vorce BOT",
 
             type: "LISTENING"
 
@@ -46,7 +46,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 
-    const prefix = "h!";
+    const prefix = "v!";
 
     if (message.author.bot) return;
 

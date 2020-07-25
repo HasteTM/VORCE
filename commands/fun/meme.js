@@ -14,7 +14,7 @@ module.exports = {
         const img = await randomPuppy(random);
         const embed = new RichEmbed()
             .setAuthor('Meme', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-            .setColor("#01000a")
+            .setColor("#102445")
             .setImage(img)
             .setTitle(`From /r/${random}`)
             .setURL(`https://reddit.com/r/${random}`);
