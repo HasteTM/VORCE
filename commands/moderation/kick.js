@@ -82,19 +82,19 @@ module.exports = {
 
             .setAuthor('Kick', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
-            .setColor("#01000a")
+            .setColor("#fc0303")
 
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
-            .setDescription(stripIndents`** Kicked member:** ${toKick} (${toKick.id})
+            .setDescription(stripIndents`** Kicked member:** ${toKick})
 
-            ** Kicked by:** ${message.member} (${message.member.id})
+            ** Kicked by:** ${message.member})
 
             ** Reason:** ${args.slice(1).join(" ")}`);
 
         const promptEmbed = new RichEmbed()
 
-            .setColor("#01000a")
+            .setColor("#102445")
 
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 

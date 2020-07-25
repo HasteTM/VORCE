@@ -10,7 +10,7 @@ module.exports = {
     run: (client, message, args) => {
 
         const embed = new RichEmbed()
-
+        .setColor('#102445')
         .setAuthor('Guilds', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setDescription(`**${client.user.username} Bot is currently in __${client.guilds.size}__ servers!**`)
         message.channel.send(embed);

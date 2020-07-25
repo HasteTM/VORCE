@@ -36,7 +36,7 @@ client.on("ready", () => {
 
             name: "h!help | Haste BOT",
 
-            type: "PLAYING"
+            type: "LISTENING"
 
         }
 

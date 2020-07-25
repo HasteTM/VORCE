@@ -34,7 +34,7 @@ module.exports = {
             .setAuthor('Whois', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
             .setThumbnail(member.user.displayAvatarURL)
 
-            .setColor('#01000a')
+            .setColor('#102445')
 
             .addField('Member information:', stripIndents` Display name: ${member.displayName}
 
