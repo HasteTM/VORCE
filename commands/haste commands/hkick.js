@@ -88,7 +88,7 @@ module.exports = {
 
             .setDescription(stripIndents`** Kicked member:** ${toKick})
 
-            ** Kicked by:** ${message.member})
+            ** Kicked by:** ${message.member}
 
             ** Reason:** ${args.slice(1).join(" ")}`);
 

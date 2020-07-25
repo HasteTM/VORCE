@@ -89,7 +89,7 @@ module.exports = {
 
             .setDescription(stripIndents`** Banned member:** ${toBan})
 
-            ** Banned by:** ${message.member})
+            ** Banned by:** ${message.member}
 
             ** Reason:** ${args.slice(1).join(" ")}`);
 
