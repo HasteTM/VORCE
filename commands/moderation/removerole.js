@@ -16,7 +16,7 @@ module.exports = {
 
   
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-  if(!rMember) return message.reply("Couldn't find that user, yo.");
+  if(!rMember) return message.channel.send("Couldn't find that user.");
 
   let role = args.join(" ").slice(22);
 
@@ -24,15 +24,18 @@ module.exports = {
 
   let gRole = message.guild.roles.find(`name`, role);
 
-  if(!gRole) return message.reply("Couldn't find that role.");
+  if(!gRole) return message.channel.send("Couldn't find that role.");
 
   if(!rMember.roles.has(gRole.id)) return message.reply("They don't have that role.");
   await(rMember.removeRole(gRole.id));
 
   try{
-    await rMember.send(`RIP, you lost the ${gRole.name} role.`)
+    await rMember.send(`ROLES UPDATED | Your role ${gRole.name} has been taken.`)
+
   }catch(e){
-    message.channel.send(`RIP to <@${rMember.id}>, We removed ${gRole.name} from them. We tried to DM them, but their DMs are locked.`)
+
+    message.channel.send(`Removed ${gRole.name} from <@${rMember.id}> . Failed to DM User (DM'S are Disabled)`)
+
   }
 }
 
