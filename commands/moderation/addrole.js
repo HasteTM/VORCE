@@ -6,7 +6,7 @@ module.exports = {
 
     category: "moderation",
 
-    description: "mutes the members",
+    description: "adds members role",
 
 
     run: async (client, message, args) => {

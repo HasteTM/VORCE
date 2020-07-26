@@ -2,11 +2,11 @@ const { RichEmbed } = require("discord.js");
 
 module.exports = {
 
-    name: "addrole",
+    name: "removerole",
 
     category: "moderation",
 
-    description: "mutes the members",
+    description: "removes users role",
 
 
     run: async (client, message, args) => {
@@ -23,7 +23,7 @@ module.exports = {
   if(!role) return message.reply("Specify a role!");
 
   let gRole = message.guild.roles.find(`name`, role);
-  
+
   if(!gRole) return message.reply("Couldn't find that role.");
 
   if(!rMember.roles.has(gRole.id)) return message.reply("They don't have that role.");
