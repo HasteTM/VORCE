@@ -34,9 +34,9 @@ client.on("ready", () => {
 
         game: {
 
-            name: "v!help | Vorce BOT",
+            name: (`${client.users.size} users`),
 
-            type: "LISTENING"
+            type: "WATCHING"
 
         }
 
