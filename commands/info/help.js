@@ -16,7 +16,7 @@ module.exports = {
 
         .setColor('#102445')
         .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-        .addField('🔐 Moderation', '`say, purge, ban, kick, addrole, removerole, unban`')
+        .addField('🔐 Moderation', '`say, purge, ban, kick, unban, addrole, removerole, mute, unmute`')
         .addField('✅ Bot', '`guilds, status, invite, support, eval`')
         .addField('❗️ Info', '`avatar, serverinfo, userinfo`')
         .addField('🎉 Fun', '`meme, rps, love`')
