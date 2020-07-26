@@ -34,7 +34,7 @@ client.on("ready", () => {
 
         game: {
 
-            name: (`${client.users.size} users`),
+            name: (`${client.users.size} users | v!help`),
 
             type: "WATCHING"
 
