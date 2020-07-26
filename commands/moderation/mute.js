@@ -11,7 +11,7 @@ module.exports = {
 
     run: async (client, message, args) => {
 // check if the command caller has permission to use the command
-if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send("❌ You don't have permissions to use this command.");
+if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("❌ You don't have permissions to use this command.");
 
 if(!message.guild.me.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send("❌ Bot does not have permissions to perform this command.")
 
