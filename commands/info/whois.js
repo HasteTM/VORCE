@@ -31,7 +31,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 // fix embeds later
-            .setAuthor('Whois', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor('Userinfo', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
             .setThumbnail(member.user.displayAvatarURL)
 
             .setColor('#102445')
