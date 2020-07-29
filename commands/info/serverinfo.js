@@ -14,7 +14,7 @@ module.exports = {
         const embed = new RichEmbed()
 // embeds
     .setAuthor('Serverinfo', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-    .setColor("#102445")
+    .setColor("#830000")
     .setThumbnail(message.guild.iconURL)
     .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
     .addField('Server Owner', message.guild.owner)

@@ -94,7 +94,7 @@ module.exports = {
 
         const promptEmbed = new RichEmbed()
 
-            .setColor("#102445")
+            .setColor("#830000")
 
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 

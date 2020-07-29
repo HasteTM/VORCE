@@ -14,12 +14,13 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-        .setColor('#102445')
+        .setColor('#830000')
         .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-        .addField('🔐 Moderation', '`say, purge, ban, kick, unban, addrole, removerole, mute, unmute`')
+        .addField('🔐 Moderation', '`say, purge, ban, kick, unban,`')
         .addField('✅ Bot', '`guilds, status, invite, support, eval`')
         .addField('❗️ Info', '`avatar, serverinfo, userinfo`')
         .addField('🎉 Fun', '`meme, rps, love`')
+        .addField('🎵 Music', '`Coming Soon!!`')
         .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
 

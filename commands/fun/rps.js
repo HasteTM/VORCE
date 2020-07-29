@@ -10,7 +10,7 @@ module.exports = {
     usage: "rps",
     run: async (client, message, args) => {
         const embed = new RichEmbed()
-            .setColor("#102445")
+            .setColor("#830000")
             .setFooter(message.guild.me.displayName, client.user.displayAvatarURL)
             .setDescription("Add a reaction to one of these emojis to play the game!")
             .setTimestamp();
