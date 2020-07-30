@@ -130,7 +130,7 @@ module.exports = {
             
             .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
-            .setDescription(stripIndents`** Banned member:** ${toBan})
+            .setDescription(stripIndents`** Banned member:** ${toBan}
 
             ** Banned By:** ${message.member}
 
