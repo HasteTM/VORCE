@@ -18,7 +18,7 @@ module.exports = {
 
         const ban1 = new RichEmbed()
         .setColor('#830000')
-        .setAuthor(`Please provide a person to ban. [${message.mentions.author}]`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setAuthor(`Please provide a person to ban.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
         const ban2 = new RichEmbed()
         .setColor('#830000')
@@ -30,7 +30,7 @@ module.exports = {
         
         const ban4 = new RichEmbed()
         .setColor('#830000')
-        .setAuthor("Bot does not have permissions to kick members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setAuthor("Bot does not have permissions to ban members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
         const ban5 = new RichEmbed()
         .setColor('#830000')

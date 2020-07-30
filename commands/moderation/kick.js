@@ -16,13 +16,41 @@ module.exports = {
 
     run: async (client, message, args) => {
 
+        const kick1 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor(`Please provide a person to kick.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const kick2 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor('Please provide a reason to kick.', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const kick3 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        
+        const kick4 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("Bot does not have permissions to kick members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const kick5 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("Couldn't find that member, try again", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const kick6 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("You can't kick yourself.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const kick7 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("I can't kick that member due to role hierarchy.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
         const logChannel = message.guild.channels.find(c => c.name === "logs34978937458") || message.channel;
 
         if (message.deletable) message.delete();
 
         if (!args[0]) {
 
-            return message.reply(" ⚠️ Please provide a person to kick.")
+            return message.channel.send(kick1)
 
                 .then(m => m.delete(5000));
 
@@ -30,7 +58,7 @@ module.exports = {
 
         if (!args[1]) {
 
-            return message.reply(" ⚠️ Please provide a reason to kick.")
+            return message.channel.send(kick2)
 
                 .then(m => m.delete(5000));
 
@@ -38,7 +66,7 @@ module.exports = {
 
         if (!message.member.hasPermission("KICK_MEMBERS")) {
 
-            return message.reply(" ❌ You don't have permissions to use this command.")
+            return message.channel.send(kick3)
 
                 .then(m => m.delete(5000));
 
@@ -46,7 +74,7 @@ module.exports = {
 
         if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
 
-            return message.reply(" ❌ Bot does not have permissions to kick members.")
+            return message.channel.send(kick4)
 
                 .then(m => m.delete(5000));
 
@@ -56,15 +84,14 @@ module.exports = {
 
         if (!toKick) {
 
-            return message.reply(" ⚠️ Couldn't find that member, try again")
-
+            return message.channel.send(kick5)
                 .then(m => m.delete(5000));
 
         }
 
         if (toKick.id === message.author.id) {
 
-            return message.reply(" ⚠️ You can't kick yourself.")
+            return message.channel.send(kick6)
 
                 .then(m => m.delete(5000));
 
@@ -72,7 +99,7 @@ module.exports = {
 
         if (!toKick.kickable) {
 
-            return message.reply(" ⚠️ I can't kick that member due to role hierarchy.")
+            return message.channel.send(kick7)
 
                 .then(m => m.delete(5000));
 
