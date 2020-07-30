@@ -15,6 +15,7 @@ module.exports = {
         const embed  = new RichEmbed()
 
         .setColor('#830000')
+        .setDescription("Make sure you have your DMs open!")
         .setAuthor('Check Direct Messages!', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
 
@@ -22,11 +23,12 @@ module.exports = {
 
         .setColor('#830000')
         .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-        .addField('🔐 Moderation', '`say, purge, ban, kick, unban,`')
-        .addField('✅ Bot', '`guilds, status, invite, support, eval`')
-        .addField('❗️ Info', '`avatar, serverinfo, userinfo, query`')
-        .addField('🎉 Fun', '`meme, rps, love, fortnite store`')
-        .addField('🎵 Music', '`Coming Soon!!`')
+        .addField('🔐 | Moderation', '`say, purge, ban, kick, unban,`')
+        .addField('✅  | Bot', '`guilds, status, invite, support, eval`')
+        .addField('❗️ |  Info', '`avatar, serverinfo, userinfo, query`')
+        .addField('🎉 | Fun', '`meme, rps, love, fortnite store`')
+        .addField('🎵 | Music', '`Coming Soon!!`')
+        .addField('🔞 | NSFW', '`boobs, pussy, lesbian, anal, kissing, ass`')
         .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
 
