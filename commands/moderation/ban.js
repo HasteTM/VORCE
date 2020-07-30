@@ -19,30 +19,45 @@ module.exports = {
         const ban1 = new RichEmbed()
         .setColor('#830000')
         .setAuthor(`Please provide a person to ban.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban2 = new RichEmbed()
         .setColor('#830000')
         .setAuthor('Please provide a reason to ban.', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban3 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-        
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         const ban4 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("Bot does not have permissions to ban members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban5 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("Couldn't find that member, try again", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban6 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("You can't ban yourself.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban7 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("I can't ban that member due to role hierarchy.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const logChannel = message.guild.channels.find(c => c.name === "logs034768734867") || message.channel;
 
@@ -117,7 +132,7 @@ module.exports = {
 
             .setDescription(stripIndents`** Banned member:** ${toBan})
 
-            ** Banned by:** ${message.member}
+            ** Banned By:** ${message.member}
 
             ** Reason:** ${args.slice(1).join(" ")}`);
 

@@ -19,31 +19,45 @@ module.exports = {
         const kick1 = new RichEmbed()
         .setColor('#830000')
         .setAuthor(`Please provide a person to kick.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const kick2 = new RichEmbed()
         .setColor('#830000')
         .setAuthor('Please provide a reason to kick.', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+        
         const kick3 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick4 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("Bot does not have permissions to kick members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+        
         const kick5 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("Couldn't find that member, try again", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+        
         const kick6 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("You can't kick yourself.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+        
         const kick7 = new RichEmbed()
         .setColor('#830000')
         .setAuthor("I can't kick that member due to role hierarchy.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+        
         const logChannel = message.guild.channels.find(c => c.name === "logs34978937458") || message.channel;
 
         if (message.deletable) message.delete();

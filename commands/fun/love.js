@@ -26,12 +26,12 @@ module.exports = {
         // loveIndex is a number from 0 to 10, based on that love variable
         const love = Math.random() * 100;
         const loveIndex = Math.floor(love / 10);
-        const loveLevel = "💖".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
+        const loveLevel = "💗".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
 
         const embed = new RichEmbed()
             .setColor("#830000")
-            .addField(`☁ **${person.displayName}** loves **${message.member.displayName}** this much:`,
-            `💟 ${Math.floor(love)}%\n\n${loveLevel}`);
+            .addField(`⚠️ | **${person.displayName}** loves **${message.member.displayName}** this much:`,
+            `💟 | ${Math.floor(love)}%\n\n${loveLevel}`);
 
         message.channel.send(embed);
     }
