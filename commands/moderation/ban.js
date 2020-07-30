@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const { RichEmbed, DiscordAPIError } = require("discord.js");
 
 const { stripIndents } = require("common-tags");
 
@@ -16,13 +16,41 @@ module.exports = {
 
     run: async (client, message, args) => {
 
+        const ban1 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor(`Please provide a person to ban. [${message.mentions.author}]`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const ban2 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor('Please provide a reason to ban.', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const ban3 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        
+        const ban4 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("Bot does not have permissions to kick members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const ban5 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("Couldn't find that member, try again", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const ban6 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("You can't ban yourself.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
+        const ban7 = new RichEmbed()
+        .setColor('#830000')
+        .setAuthor("I can't ban that member due to role hierarchy.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+
         const logChannel = message.guild.channels.find(c => c.name === "logs034768734867") || message.channel;
 
         if (message.deletable) message.delete();
 
         if (!args[0]) {
 
-            return message.reply(" ⚠️ Please provide a person to ban. ")
+            return message.channel.send(ban1)
 
                 .then(m => m.delete(5000));
 
@@ -30,7 +58,7 @@ module.exports = {
 
         if (!args[1]) {
 
-            return message.reply(" ⚠️ Please provide a reason to ban.")
+            return message.channel.send(ban2)
 
                 .then(m => m.delete(5000));
 
@@ -38,7 +66,7 @@ module.exports = {
 
         if (!message.member.hasPermission("BAN_MEMBERS")) {
 
-            return message.reply(" ❌ You don't have permissions to use this command.")
+            return message.channel.send(ban3)
 
                 .then(m => m.delete(5000));
 
@@ -48,7 +76,7 @@ module.exports = {
 
         if (!message.guild.me.hasPermission("BAN_MEMBERS")) {
 
-            return message.reply(" ❌ Bot does not have permissions to kick members.")
+            return message.channel.send(ban4)
 
                 .then(m => m.delete(5000));
 
@@ -57,7 +85,7 @@ module.exports = {
 
         if (!toBan) {
 
-            return message.reply(" ⚠️ Couldn't find that member, try again")
+            return message.channel.send(ban5)
 
                 .then(m => m.delete(5000));
 
@@ -65,7 +93,7 @@ module.exports = {
 
         if (toBan.id === message.author.id) {
 
-            return message.reply(" ⚠️ You can't ban yourself.")
+            return message.channel.send(ban6)
 
                 .then(m => m.delete(5000));
 
@@ -73,7 +101,7 @@ module.exports = {
 
         if (!toBan.bannable) {
 
-            return message.reply(" ⚠️ I can't ban that member due to role hierarchy.")
+            return message.channel.send(ban7)
 
                 .then(m => m.delete(5000));
 

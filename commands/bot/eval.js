@@ -6,8 +6,8 @@ name: "eval",
 aliases: ["e"],
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
-     if (message.author.id !== "651515978231971900") {
-        return message.channel.send("Your not Haste!") 
+     if (message.author.id !== "651515978231971900", "709151479918755890", "698306752508198972") {
+        return message.channel.send("You're not a Vorce Admin or a Developer!") 
         .then(m => m.delete(5000));
     }
 

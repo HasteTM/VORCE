@@ -35,6 +35,10 @@ module.exports = {
 
             .setAuthor('Avatar', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
 
+            .setTitle(`${member.user.tag}'s Avatar`)
+
+            .setURL(member.user.displayAvatarURL)
+
             .setImage(member.user.displayAvatarURL)
 
             .setColor('#830000')

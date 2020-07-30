@@ -7,7 +7,7 @@ module.exports = {
     description: "Sends an epic meme",
     run: async (client, message, args) => {
 
-        const subReddits = ["dankmeme", "meme", "me_irl"];
+        const subReddits = ["dankmeme", "meme", "me_irl", "memes", "dankmemes"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
