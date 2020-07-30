@@ -2,8 +2,8 @@ const { RichEmbed } = require("discord.js");
 const beautify = require("beautify"); 
 
 module.exports = {
-name: "eval",
-aliases: ["e"],
+name: "heval",
+aliases: ["he"],
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
      if (message.author.id !== "651515978231971900") {
