@@ -131,7 +131,7 @@ module.exports = {
 
             ** Kicked by:** ${message.member}
 
-            ** Reason:** ${args.slice(1).join(" ")}`;
+            ** Reason:** ${args.slice(1).join(" ")})`;
 
         const promptEmbed = new RichEmbed()
 
