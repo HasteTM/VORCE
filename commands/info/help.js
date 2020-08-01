@@ -25,7 +25,7 @@ module.exports = {
         .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .addField('🔐 | Moderation', '`say, purge, ban, kick, unban,`')
         .addField('✅  | Bot', '`guilds, status, invite, support, eval`')
-        .addField('❗️ |  Info', '`avatar, serverinfo, userinfo, query`')
+        .addField('❗️ |  Info', '`avatar, serverinfo, userinfo, query, ping`')
         .addField('🎉 | Fun', '`meme, rps, love`')
         .addField('🎵 | Music', '`Coming Soon!!`')
         .addField('🔧 | Utility','`Coming Soong!!`')
