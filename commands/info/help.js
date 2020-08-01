@@ -26,9 +26,9 @@ module.exports = {
         .addField('🔐 | Moderation', '`say, purge, ban, kick, unban,`')
         .addField('✅  | Bot', '`guilds, status, invite, support, eval`')
         .addField('❗️ |  Info', '`avatar, serverinfo, userinfo, query`')
-        .addField('🎉 | Fun', '`meme, rps, love, fortnite store`')
+        .addField('🎉 | Fun', '`meme, rps, love`')
         .addField('🎵 | Music', '`Coming Soon!!`')
-        .addField('🔞 | NSFW', '`boobs, pussy, lesbian, anal, kissing, ass`')
+        .addField('🔧 | Utility','`Coming Soong!!`')
         .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
 
