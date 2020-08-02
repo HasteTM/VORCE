@@ -1,6 +1,9 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection} = require("discord.js");
+
+const MusicBot = require("vorce-music-module");
 
 const { config } = require("dotenv");
+
 
 const client = new Client({
 
@@ -26,23 +29,19 @@ config({
 
 client.on("ready", () => {
 
-    console.log(` ${client.user.username} is now appearing online!`);
+    console.log(` ${client.user.username} is now appearing online, in ${client.guilds.size} servers!`);
+    client.user.setStatus('dnd');
+    const activities_list = [
+    `${client.users.size} users`,
+    "for v!help",
+    `${client.guilds.size} servers!`,
+    ]; // creates an arraylist containing phrases you want your bot to switch through.
 
-    client.user.setPresence({
-
-        status: "online",
-
-        game: {
-
-            name: (`${client.users.size} users | v!help`),
-
-            type: "WATCHING"
-
-        }
-
-    }); 
-
-})
+    setInterval(() => {
+    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+    client.user.setActivity(`${activities_list[index]}`, { type: "WATCHING" });
+    }, 10000);
+});
 
 client.on("message", async message => {
 
@@ -66,9 +65,17 @@ client.on("message", async message => {
 
     if (!command) command = client.commands.get(client.aliases.get(cmd));
 
-    if (command) 
+    if (command)
 
         command.run(client, message, args);
 });
+//music module below do not change
+const bot = new MusicBot({
+    token: `${process.env.token}`,
+    ytApiKey: `${process.env.YTapikey}`,
+    prefix: `v!`,
+    game: ' '
+});
 
+bot.run(); // Run the music module
 client.login(process.env.token);

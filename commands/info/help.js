@@ -24,10 +24,10 @@ module.exports = {
         .setColor('#830000')
         .setAuthor('Help', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .addField('🔐 | Moderation', '`say, purge, ban, kick, unban,`')
-        .addField('✅  | Bot', '`guilds, status, invite, support, eval`')
+        .addField('✅  | Bot', '`guilds, status, invite, support, eval, botinfo`')
         .addField('❗️ |  Info', '`avatar, serverinfo, userinfo, query, ping`')
         .addField('🎉 | Fun', '`meme, rps, love`')
-        .addField('🎵 | Music', '`Coming Soon!!`')
+        .addField('🎵 | Music', '`play, pause, skip, stop, volume, queue, remove, np`')
         .addField('🔧 | Utility','`Coming Soong!!`')
         .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
