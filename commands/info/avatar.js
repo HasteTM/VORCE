@@ -41,7 +41,7 @@ module.exports = {
 
             .setImage(member.user.displayAvatarURL)
 
-            .setColor('#830000')
+            .setColor('#8e2430')
 
         message.channel.send(embed);
 

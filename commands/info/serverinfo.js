@@ -1,5 +1,4 @@
-const Discord = require("discord.js")
-let color = "#8e2430";
+const Discord = require("discord.js");
 module.exports = {
 
     name: "serverinfo",
@@ -36,18 +35,18 @@ module.exports = {
         };
         let msg = message;
         const embed = new Discord.RichEmbed()
-            .setColor(color)
-            .setAuthor(msg.guild.name, msg.guild.iconURL)
-            .addField("Name", msg.guild.name, true)
-            .addField("ID", msg.guild.id, true)
-            .addField("Owner", `${msg.guild.owner.user.username}#${msg.guild.owner.user.discriminator}`, true)
-            .addField("Region", region[msg.guild.region], true)
+            .setColor('#8e2430')
+            .setAuthor(message.guild.name, message.guild.iconURL)
+            .addField("Name", message.guild.name, true)
+            .addField("ID", message.guild.id, true)
+            .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
+            .addField("Region", region[message.guild.region], true)
             .addField("Total Members", `${message.guild.memberCount}`, true)
-            .addField("Verification Level", verifLevels[msg.guild.verificationLevel], true)
-            .addField("Channels", msg.guild.channels.size, true)
-            .addField("Roles", msg.guild.roles.size, true)
+            .addField("Verification Level", verifLevels[message.guild.verificationLevel], true)
+            .addField("Channels", message.guild.channels.size, true)
+            .addField("Roles", message.guild.roles.size, true)
             .addField("Creation Date", `${msg.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(msg.channel.guild.createdAt)})`, true)
-            .setThumbnail(msg.guild.iconURL)
+            .setThumbnail(message.guild.iconURL)
             .setTimestamp()
             .setFooter(`${message.author.username}`, message.author.avatarURL)
         msg.channel.send({embed});

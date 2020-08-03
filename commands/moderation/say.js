@@ -9,13 +9,13 @@ module.exports = {
         message.delete();
 
         const say1 = new RichEmbed()
-        .setColor('#830000')
+        .setColor('#8e2430')
         .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const say2 = new RichEmbed()
-        .setColor('#830000')
+        .setColor('#8e2430')
         .setAuthor("Please provide a message for me to say!", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)

@@ -8,19 +8,19 @@ module.exports = {
     run: async (client, message, args) => {
 
         const purge1 = new RichEmbed()
-        .setColor('#830000')
+        .setColor('#8e2430')
         .setAuthor(`You don't have permissions to use this command.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge2 = new RichEmbed()
-        .setColor('#830000')
+        .setColor('#8e2430')
         .setAuthor(`Please enter a number [0 doesn't work].`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge3 = new RichEmbed()
-        .setColor('#830000')
+        .setColor('#8e2430')
         .setAuthor(`Sorry, I do not have permissions to delete messages.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)

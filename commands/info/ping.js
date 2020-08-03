@@ -1,5 +1,5 @@
-const Discord = require('discord.js')
-let color = "#8e2430";
+const Discord = require('discord.js');
+
 module.exports = {
     name: "ping",
     description: "Returns latency and API ping",
@@ -7,7 +7,7 @@ module.exports = {
 
           const msg = await message.channel.send(`🏓 Pinging....`);
           let pembed = new Discord.RichEmbed()
-          .setColor(color)
+          .setColor('#8e2430')
           .setTitle("🏓 Pong!")
           .setThumbnail(client.user.displayAvatarURL)
           .addField("**Latency**", `${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms`)

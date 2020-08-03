@@ -29,7 +29,7 @@ module.exports = {
         const loveLevel = "💗".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
 
         const embed = new RichEmbed()
-            .setColor("#830000")
+            .setColor("#8e2430")
             .addField(`⚠️ | **${person.displayName}** loves **${message.member.displayName}** this much:`,
             `💟 | ${Math.floor(love)}%\n\n${loveLevel}`);
 

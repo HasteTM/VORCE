@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { version }= require("discord.js");
-let color = "#8e2430";
 const moment = require("moment");
 module.exports = {
 
@@ -32,7 +31,7 @@ module.exports = {
         `)
         .setTimestamp()
         .setFooter(`${message.author.username}`, message.author.avatarURL)
-        .setColor(color)
+        .setColor('#8e2430')
     message.channel.send(embed);
 
 
