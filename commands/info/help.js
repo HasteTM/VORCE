@@ -28,7 +28,7 @@ module.exports = {
         .addField('❗️ |  Info', '`avatar, serverinfo, userinfo, query, ping`')
         .addField('🎉 | Fun', '`meme, rps, love`')
         .addField('🎵 | Music', '`play, pause, skip, stop, volume, queue, remove, np`')
-        .addField('🔧 | Utility','`Coming Soong!!`')
+        .addField('🔧 | Utility','`poll`')
         .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
 
