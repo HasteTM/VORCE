@@ -19,7 +19,7 @@ module.exports = {
       }
 
     const embed = new Discord.RichEmbed()
-    .setAuthor('Botinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740315620696129676/bots.png')
+    .setAuthor('Botinfo', 'https://cdn.discordapp.com/attachments/664927615034982410/740330612375945326/bots.png')
       .setTitle("Vorce Statistics!")
       .setThumbnail(client.user.displayAvatarURL)
       .setDescription(`
