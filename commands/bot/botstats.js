@@ -3,7 +3,7 @@ const { version }= require("discord.js");
 const moment = require("moment");
 module.exports = {
 
-    name: "botinfo",
+    name: "botstats",
 
     description: "Displays bot information.",
 
@@ -19,7 +19,7 @@ module.exports = {
       }
 
     const embed = new Discord.RichEmbed()
-    .setAuthor('Botinfo', 'https://cdn.discordapp.com/attachments/664927615034982410/740330612375945326/bots.png')
+    .setAuthor('Botstats', 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
       .setTitle("Vorce Statistics!")
       .setThumbnail(client.user.displayAvatarURL)
       .setDescription(`

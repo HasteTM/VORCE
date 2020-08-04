@@ -17,7 +17,7 @@ module.exports = {
         .setAuthor('Invite')
         .setColor("#7289da")
         .setThumbnail(client.user.displayAvatarURL)
-        .setTitle("Click to invite Vorce Bot!", 'https://cdn.discordapp.com/attachments/651589704772485131/740315620696129676/bots.png')
+        .setTitle("Click to invite Vorce Bot!", 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
         .setURL("https://discord.com/api/oauth2/authorize?client_id=733774256940515349&permissions=8&scope=bot")
         .setDescription('Made with ❤️ by Vorce Bot Team')
 
