@@ -21,7 +21,7 @@ module.exports = {
 
         .setColor('#7289da')
         .addField('<:work:740255311264350268> | Moderation', '`say` | `purge` | `ban` | `kick` | `unban`')
-        .addField('<:bots:740255859761741836> | Bot', '`guild` | `status` | `invite` | `support` | `eval` | `botinfo`')
+        .addField('<:bots:740255859761741836> | Bot', '`guild` | `botstats` | `invite` | `support` | `eval` |')
         .addField('<:bilgi:740317093018468483> |  Info', '`avatar` | `serverinfo` | `userinfo` | `ping`')
         .addField('<:speak:740255369737273454> | Fun', '`meme` | `rps` | `love`')
         .addField('<:music:740255395402219591> | Music', '`play` | `pause` | `skip` | `stop` | `volume` | `queue` | `remove` | `np`')
