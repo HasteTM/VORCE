@@ -17,50 +17,50 @@ module.exports = {
     run: async (client, message, args) => {
 
         const canceled = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor(`Kick has been canceled!`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor(`Kick has been canceled!`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const kick1 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor(`Please provide a person to kick.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor(`Please provide a person to kick.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const kick2 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor('Please provide a reason to kick.', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor('Please provide a reason to kick.')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick3 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("You don't have permissions to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick4 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("Bot does not have permissions to kick members.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("Bot does not have permissions to kick members.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick5 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("Couldn't find that member, try again", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("Couldn't find that member, try again")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick6 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("You can't kick yourself.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("You can't kick yourself.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick7 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("I can't kick that member due to role hierarchy.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("I can't kick that member due to role hierarchy.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
@@ -127,11 +127,9 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-            .setAuthor('Kick', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor('Kick', 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
 
-            .setColor("#8e2430")
-
-            .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
+            .setColor("#7289da")
 
             .setDescription(stripIndents`** Kicked member:** ${toKick})
 
@@ -141,11 +139,9 @@ module.exports = {
 
         const promptEmbed = new RichEmbed()
 
-            .setColor("#8e2430")
+            .setColor("#7289da")
 
-            .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
-
-            .setAuthor(`This verification becomes invalid after 30 minutes.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor(`This verification becomes invalid after 30 minutes.`, 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
 
             .setDescription(`Do you want to kick ${toKick}?`)
 

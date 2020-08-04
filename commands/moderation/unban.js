@@ -12,32 +12,32 @@ module.exports = {
     run: async (client, message, args) => {
 
         const unban1 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("You need to provide an ID.", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("You need to provide an ID.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const unban2 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor("Please provide a User ID to unban someone!", 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor("Please provide a User ID to unban!")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const unban3 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor(`${bannedMember.tag} has been unbanned from the guild!`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor(`${bannedMember.tag} has been unbanned from the guild!`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const unban4 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor(`You don't have permission to use this command.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor(`You don't have permission to use this command.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const unban5 = new RichEmbed()
-        .setColor('#8e2430')
-        .setAuthor(`Bot does not have permissions to perform this command.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor(`Bot does not have permissions to perform this command.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

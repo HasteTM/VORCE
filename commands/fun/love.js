@@ -29,7 +29,8 @@ module.exports = {
         const loveLevel = "💗".repeat(loveIndex) + "💔".repeat(10 - loveIndex);
 
         const embed = new RichEmbed()
-            .setColor("#8e2430")
+            .setColor("#7289da")
+            .setAuthor('Love', 'https://cdn.discordapp.com/attachments/651589704772485131/740315596297732268/speak.png')
             .addField(`⚠️ | **${person.displayName}** loves **${message.member.displayName}** this much:`,
             `💟 | ${Math.floor(love)}%\n\n${loveLevel}`);
 

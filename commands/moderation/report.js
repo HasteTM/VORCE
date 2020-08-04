@@ -26,7 +26,7 @@ module.exports = {
             return message.channel.send("Couldn't find a `#reports` channel").then(m => m.delete(5000));
 
         const embed = new RichEmbed()
-            .setColor("#8e2430")
+            .setColor("#7289da")
             .setTimestamp()
             .setFooter(message.guild.name, message.guild.iconURL)
             .setAuthor("Reported member", rMember.user.displayAvatarURL)

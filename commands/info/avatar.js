@@ -33,7 +33,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-            .setAuthor('Avatar', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor('Avatar', 'https://cdn.discordapp.com/attachments/651589704772485131/740317708553551922/bilgi.png')
 
             .setTitle(`${member.user.tag}'s Avatar`)
 
@@ -41,7 +41,7 @@ module.exports = {
 
             .setImage(member.user.displayAvatarURL)
 
-            .setColor('#8e2430')
+            .setColor('#7289da')
 
         message.channel.send(embed);
 

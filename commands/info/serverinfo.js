@@ -35,7 +35,7 @@ module.exports = {
         };
         let msg = message;
         const embed = new Discord.RichEmbed()
-            .setColor('#8e2430')
+            .setColor('#7289da')
             .setAuthor(message.guild.name, message.guild.iconURL)
             .addField("Name", message.guild.name, true)
             .addField("ID", message.guild.id, true)

@@ -31,7 +31,7 @@ module.exports = {
         `)
         .setTimestamp()
         .setFooter(`${message.author.username}`, message.author.avatarURL)
-        .setColor('#8e2430')
+        .setColor('#7289da')
     message.channel.send(embed);
 
 

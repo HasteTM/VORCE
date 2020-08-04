@@ -31,10 +31,11 @@ module.exports = {
 
         const embed = new RichEmbed()
 // fix embeds later
-            .setAuthor('Userinfo', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+            .setAuthor('Userinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740317708553551922/bilgi.png')
+
             .setThumbnail(member.user.displayAvatarURL)
 
-            .setColor('#8e2430')
+            .setColor('#7289da')
 
             .addField('Member information:', stripIndents` Display name: ${member.displayName}
 
@@ -49,7 +50,6 @@ module.exports = {
              Tag: ${member.user.tag}
 
              Created at: ${created}`, true)
-            .setImage('https://cdn.discordapp.com/attachments/665508963068018688/665509427188596766/rainbowdivider_1.gif')
 
 
         if (member.user.presence.game) 

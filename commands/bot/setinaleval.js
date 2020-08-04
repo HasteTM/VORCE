@@ -26,8 +26,8 @@ run: async (client, message, args) => {
     const evaluated = eval(toEval);
 
     let embed = new RichEmbed()
-    .setColor("#5eff00")
-    .setAuthor("Eval", "https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif")
+    .setColor("#7289da")
+    .setAuthor("Eval", 'https://cdn.discordapp.com/attachments/651589704772485131/740315620696129676/bots.png')
     .addField("To evaluate:", `\`\`\`js\n${beautify(args.join(" "), { format: "js" })}\n\`\`\``)
     .addField("Evaluated:", evaluated);
 

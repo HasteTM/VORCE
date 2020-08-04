@@ -12,8 +12,8 @@ module.exports = {
 
         const embed = new RichEmbed()
 // need to push new update with rgb theme
-        .setColor('#8e2430')
-        .setAuthor('Status', 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setColor('#7289da')
+        .setAuthor('Status', 'https://cdn.discordapp.com/attachments/651589704772485131/740315620696129676/bots.png')
         .addField('Bot Status', '🌐 Online')
         .addField('VPS status', '🌐 Online')
         .addField('API Status', '✅ Operational')

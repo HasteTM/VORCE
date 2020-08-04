@@ -16,7 +16,6 @@ module.exports = {
             
             const poll1 = new RichEmbed()
             .setColor('#8e2430')
-            .setAuthor(`Poll`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
             .setTitle("If you wanna create a poll, please do v!poll (message) to start a poll.")
             .setTimestamp()
             .setFooter(`${message.author.username}`, message.author.avatarURL)
@@ -26,9 +25,9 @@ module.exports = {
 
         } else {
             const poll2 = new RichEmbed()
-            .setColor("8e2430")
-            .setAuthor(`Poll By: ${message.author.username}`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
-            .addField(`${poll}`, `Vote Down Below!`)
+            .setColor("#7289da")
+            .setAuthor('Poll', 'https://cdn.discordapp.com/attachments/651589704772485131/740315645106978876/hum.png')
+            .setDescription(`${poll}`)
             .setTimestamp()
             .setFooter(`${message.author.username}`, message.author.avatarURL)
 
