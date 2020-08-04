@@ -3,7 +3,7 @@ module.exports = {
 
     name: "serverinfo",
 
-    aliases: ["sinfo", "info"],
+    aliases: ["sinfo"],
 
     description: "Returns Bot information",
 
@@ -36,7 +36,7 @@ module.exports = {
         let msg = message;
         const embed = new Discord.RichEmbed()
             .setColor('#7289da')
-            .setAuthor(message.guild.name, message.guild.iconURL)
+            .setAuthor('Serverinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740315620696129676/bots.png')
             .addField("Name", message.guild.name, true)
             .addField("ID", message.guild.id, true)
             .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
