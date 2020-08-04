@@ -1,3 +1,5 @@
+const Discord = require("discord.js");
+
 const { Client, Collection} = require("discord.js");
 
 const MusicBot = require("vorce-music-module");
@@ -44,7 +46,11 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-
+  if (message.channel.type === "dm"){
+    let dmEmbed = new Discord.RichEmbed()
+    .setFooter(`${message.author.username}#${message.author.discriminator}: ${message.content}`, message.author.avatarURL)
+    client.channels.get('740001399877795921').send(dmEmbed);
+};
     const prefix = "v!";
 
     if (message.author.bot) return;
