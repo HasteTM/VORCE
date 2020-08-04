@@ -16,6 +16,12 @@ module.exports = {
 
     run: async (client, message, args) => {
 
+        const canceled = new RichEmbed()
+        .setColor('#8e2430')
+        .setAuthor(`Ban has been canceled!`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         const ban1 = new RichEmbed()
         .setColor('#8e2430')
         .setAuthor(`Please provide a person to ban.`, 'https://cdn.discordapp.com/attachments/664927615034982410/734857644464013414/LEGEND_01.gif')
@@ -168,7 +174,7 @@ module.exports = {
 
                 msg.delete();
 
-                message.reply(`⚠️ Canceled ban.`)
+                message.channel.send(canceled)
 
                     .then(m => m.delete(10000));
 
