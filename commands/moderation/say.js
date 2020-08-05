@@ -10,7 +10,7 @@ module.exports = {
 
         const say1 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("You don't have permissions to use this command.", 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
+        .setAuthor("You don't have permissions to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

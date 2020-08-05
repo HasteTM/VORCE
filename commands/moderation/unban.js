@@ -65,7 +65,7 @@ module.exports = {
     }
 
     let embed = new RichEmbed()
-    .setColor(redlight)
+    .setColor('#7289da')
     .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL)
     .addField("Moderation:", "unban")
     .addField("Moderated on:", `${bannedMember.username} (${bannedMember.id})`)

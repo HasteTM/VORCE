@@ -36,7 +36,7 @@ module.exports = {
         let msg = message;
         const embed = new Discord.RichEmbed()
             .setColor('#7289da')
-            .setAuthor('Serverinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740315620696129676/bots.png')
+            .setAuthor('Serverinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740317708553551922/bilgi.png')
             .addField("Name", message.guild.name, true)
             .addField("ID", message.guild.id, true)
             .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)

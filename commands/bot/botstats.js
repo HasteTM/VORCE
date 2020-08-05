@@ -3,7 +3,7 @@ const { version }= require("discord.js");
 const moment = require("moment");
 module.exports = {
 
-    name: "botstats",
+    name: "stats",
 
     description: "Displays bot information.",
 
