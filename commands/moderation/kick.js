@@ -36,13 +36,13 @@ module.exports = {
         
         const kick3 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("You don't have permissions to use this command.")
+        .setAuthor("You don't have permission to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const kick4 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("Bot does not have permissions to kick members.")
+        .setAuthor("Bot does not have permission to kick members.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         

@@ -37,13 +37,13 @@ module.exports = {
 
         const ban3 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("You don't have permissions to use this command.")
+        .setAuthor("You don't have permission to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban4 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("Bot does not have permissions to ban members.")
+        .setAuthor("Bot does not have permission to ban members.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
