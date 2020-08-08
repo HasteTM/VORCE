@@ -10,7 +10,7 @@ module.exports = {
 
     const perms1 = new RichEmbed()
     .setColor('#7289da')
-    .setDescription("You don't have permission to use this command.")
+    .setTitle("You don't have permission to use this command.")
     .setTimestamp()
     .setFooter(message.author.username, message.author.displayAvatarURL)
 
