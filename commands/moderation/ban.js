@@ -17,13 +17,13 @@ module.exports = {
     run: async (client, message, args) => {
 
         const canceled = new RichEmbed()
-        .setColor('#8e2430')
+        .setColor('#7289da')
         .setAuthor(`Ban has been canceled!`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban1 = new RichEmbed()
-        .setColor('#8e2430')
+        .setColor('#7289da')
         .setAuthor(`Please provide a person to ban.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)

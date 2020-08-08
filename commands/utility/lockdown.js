@@ -11,6 +11,8 @@ module.exports = {
     const perms1 = new RichEmbed()
     .setColor('#7289da')
     .setDescription("You don't have permission to use this command.")
+    .setTimestamp()
+    .setFooter(message.author.username, message.author.displayAvatarURL)
 
     if (!message.member.hasPermission('ADMINISTRATOR')) {
       return message.channel.send(perms1)
@@ -21,12 +23,17 @@ module.exports = {
     const lockEmbed = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Lockdown', 'https://cdn.discordapp.com/attachments/651589704772485131/740315645106978876/hum.png')
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+      .setTimestamp()
       .setDescription('🔒 Locked the channel.');
 
     const unlockEmbed = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Lockdown', 'https://cdn.discordapp.com/attachments/651589704772485131/740315645106978876/hum.png')
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+      .setTimestamp()
       .setDescription('🔓 Unlocked the channel.');
+      
 
     if (!isLocked) {
       message.member.guild.roles.forEach((role) => {
