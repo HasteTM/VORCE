@@ -16,6 +16,8 @@ module.exports = {
         .setColor('#7289da')
         .setDescription("*Make sure you have your DMs open!*")
         .setAuthor('Check Direct Messages!')
+        .setTimestamp()
+        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const dms = new RichEmbed()
 
