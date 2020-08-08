@@ -51,7 +51,7 @@ client.on("message", async message => {
     .setFooter(`${message.author.username}#${message.author.discriminator}: ${message.content}`, message.author.avatarURL)
     client.channels.get('740001399877795921').send(dmEmbed);
 };
-    const prefix = "v!";
+    const prefix = "-";
 
     if (message.author.bot) return;
 
