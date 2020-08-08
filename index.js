@@ -79,7 +79,7 @@ client.on("message", async message => {
 const bot = new MusicBot({
     token: `${process.env.token}`,
     ytApiKey: `${process.env.YTapikey}`,
-    prefix: `v!`,
+    prefix: `-`,
     game: ' '
 });
 
