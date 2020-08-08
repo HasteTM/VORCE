@@ -10,8 +10,8 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        if (!message.member.hasPermission('ADMINISTRATOR')) {
-            return message.channel.send('No wiggle fo yo')
+        if (!message.member.hasPermission("ADMINISTRATOR")) {
+            return message.channel.send('Only cool kids have access to this command :/')
             .then(m => m.delete(5000));
           }
 
@@ -62,7 +62,7 @@ Wiggle
 Wiggle
 
 `)
-
+.then(m => m.delete(3000));
     }
 
 }
