@@ -11,7 +11,7 @@ module.exports = {
     run: (client, message, args) => {
 
         if (!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send('Only cool kids have access to this command :/')
+            return message.channel.send('Only cool kids have access to this command :/ and beanlet ofc')
             .then(m => m.delete(5000));
           }
 
