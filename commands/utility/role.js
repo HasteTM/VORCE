@@ -1,9 +1,24 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-shadow */
 const { RichEmbed } = require('discord.js');
 
 module.exports = {
   name: 'role',
   description: 'Adds or removes a role from a user.',
   run: (client, message, args) => {
+
+    const perms1 = new RichEmbed()
+    .setColor('#7289da')
+    .setAuthor("You don't have permission to use this command.")
+    .setTimestamp()
+    .setFooter(message.author.username, message.author.displayAvatarURL)
+
+    if(!(message.member.hasPermission('ADMINISTRATOR') || message.member.hasPermission('MANAGE_ROLES'))) {
+        return message.channel.send(perms1)
+    }
+
     const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
     const noUser = new RichEmbed()
       .setColor('#7289da')
