@@ -7,8 +7,14 @@ module.exports = {
   name: 'lockdown',
   description: 'Locks the current channel.',
   run: (client, message) => {
+
+    const perms1 = new RichEmbed()
+    .setColor('#7289da')
+    .setDescription("You don't have permission to use this command.")
+
     if (!message.member.hasPermission('ADMINISTRATOR')) {
-      return;
+      return message.channel.send(perms1)
+      .then(m => m.delete(5000));
     }
 
 
