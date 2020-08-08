@@ -17,7 +17,7 @@ module.exports = {
 
 
 message.channel.send(`
-Wiggle
+
 Wiggle
  Wiggle
   Wiggle
