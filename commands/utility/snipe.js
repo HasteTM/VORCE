@@ -11,7 +11,7 @@ module.exports = {
     const noPermsEmbed = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Snipe', authorLogo)
-      .setDescription('⛔ You don\'t have enough permissions to use this command.')
+      .setDescription(`❗ You don't have permission to use this command.`)
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
