@@ -10,7 +10,6 @@ module.exports = {
         const announce1 = new RichEmbed()
         .setColor('#7289da')
         .setDescription(`${args.join(" ")}`)
-        .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const say1 = new RichEmbed()
