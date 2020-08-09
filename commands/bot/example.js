@@ -3,7 +3,7 @@ const { RichEmbed } = require("discord.js");
 
 module.exports = {
 
-    name: "test",
+    name: "test235235235",
 
     description: "format",
 
