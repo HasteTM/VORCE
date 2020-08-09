@@ -18,50 +18,50 @@ module.exports = {
 
         const canceled = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor(`Ban has been canceled!`)
+        .setAuthor(`⚠️ Ban has been canceled!`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban1 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor(`Please provide a person to ban.`)
+        .setAuthor(`⚠️ Please provide a person to ban.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban2 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor('Please provide a reason to ban.')
+        .setAuthor('⚠️ Please provide a reason to ban.')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
 
         const ban3 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("You don't have permission to use this command.")
+        .setAuthor("❗ You don't have permission to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban4 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("Bot does not have permission to ban members.")
+        .setAuthor("❗ Bot does not have permission to ban members.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban5 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("Couldn't find that member, try again")
+        .setAuthor("⚠️ Couldn't find that member, try again")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban6 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("You can't ban yourself.")
+        .setAuthor("⚠️ You can't ban yourself.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban7 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor("I can't ban that member due to role hierarchy.")
+        .setAuthor("⚠️ I can't ban that member due to role hierarchy.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

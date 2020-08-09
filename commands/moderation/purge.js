@@ -9,19 +9,19 @@ module.exports = {
 
         const purge1 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor(`You don't have permissions to use this command.`)
+        .setAuthor(`❗ You don't have permissions to use this command.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge2 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor(`Please enter a number [0 doesn't work].`)
+        .setAuthor(`⚠️ Please enter a number [0 doesn't work].`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge3 = new RichEmbed()
         .setColor('#7289da')
-        .setAuthor(`Sorry, I do not have permissions to delete messages.`)
+        .setAuthor(`❗ Bot does not have permission to delete/manage messages.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         

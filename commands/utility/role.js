@@ -11,7 +11,7 @@ module.exports = {
 
     const perms1 = new RichEmbed()
     .setColor('#7289da')
-    .setAuthor("You don't have permission to use this command.")
+    .setAuthor("❗ You don't have permission to use this command.")
     .setTimestamp()
     .setFooter(message.author.username, message.author.displayAvatarURL)
 
@@ -23,37 +23,37 @@ module.exports = {
     const noUser = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription('⛔ You need to mention a user to add a role to.');
+      .setDescription('⚠️ You need to mention a user to add a role to.');
 
     const noMethod = (methods) => new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription(`⛔ Please choose one of these methods: \`${methods.join(', ')}\``);
+      .setDescription(`⚠️ Please choose one of these methods: \`${methods.join(', ')}\``);
 
     const noRoles = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription('⛔ Couldn\'t find the role.\nPlease specify one or multiple roles split with commas.');
+      .setDescription('⚠️ Couldn\'t find the role.\nPlease specify one or multiple roles split with commas.');
 
     const unknownError = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription('⛔ An unknown error occured.');
+      .setDescription('⚠️ An unknown error occured.');
 
     const couldntAddRoles = (roles, user) => new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription(`⛔ Couldn't add the role${roles.length > 1 ? 's' : ''} to the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
+      .setDescription(`⚠️ Couldn't add the role${roles.length > 1 ? 's' : ''} to the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
 
     const couldntRemoveRoles = (roles, user) => new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription(`⛔ Couldn't remove the role${roles.length > 1 ? 's' : ''} from the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
+      .setDescription(`⚠️ Couldn't remove the role${roles.length > 1 ? 's' : ''} from the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
 
     const noChanges = new RichEmbed()
       .setColor('#7289da')
       .setAuthor('Roles', authorLogo)
-      .setDescription('☑️ No changes were made.');
+      .setDescription('⚠️ No changes were made.');
 
     const successAddRole = (roles, user) => new RichEmbed()
       .setColor('#7289da')

@@ -16,7 +16,7 @@ module.exports = {
             
             const poll1 = new RichEmbed()
             .setColor('#7289da')
-            .setDescription("If you want to create a poll, please do v!poll (message) to start a poll.")
+            .setDescription("⚠️ If you want to create a poll do -poll (message).")
             .setTimestamp()
             .setFooter(`${message.author.username}`, message.author.avatarURL)
 

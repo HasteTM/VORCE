@@ -1,80 +1,86 @@
-const { RichEmbed } = require("discord.js")
+/* eslint-disable yoda */
+/* eslint-disable consistent-return */
+/* eslint-disable no-restricted-globals */
+const { RichEmbed } = require('discord.js');
 
 module.exports = {
+  name: 'unban',
+  category: 'moderation',
+  description: 'Unbans a user from the guild.',
+  run: async (client, message, args) => {
+    const { channel } = message;
+    const authorLogo = 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png';
 
-    name: "unban",
+    const noUserIDEmbed = new RichEmbed()
+      .setColor('#7289da')
+      .setAuthor('Unban', authorLogo)
+      .setDescription('⚠️ Please provide a user to unban!')
+      .setTimestamp()
+      .setFooter(message.author.username, message.author.displayAvatarURL);
 
-    category: "moderation",
+    const userNoPermissionEmbed = new RichEmbed()
+      .setColor('#7289da')
+      .setAuthor('Unban', authorLogo)
+      .setDescription("❗ You don't have permission to use this command.")
+      .setTimestamp()
+      .setFooter(message.author.username, message.author.displayAvatarURL);
 
-    description: "unbans a user",
+    const botNoPermission = new RichEmbed()
+      .setColor('#7289da')
+      .setAuthor('Unban', authorLogo)
+      .setDescription('❗ Bot does not have permission to unban members.')
+      .setTimestamp()
+      .setFooter(message.author.username, message.author.displayAvatarURL);
 
+    const unbannedEmbed = (bannedMember) => new RichEmbed()
+      .setColor('#7289da')
+      .setAuthor('Unban', authorLogo)
+      .setDescription(`✅ **${bannedMember.username}#${bannedMember.discriminator}** has been unbanned from the guild!`)
+      .setTimestamp()
+      .setFooter(message.author.username, message.author.displayAvatarURL);
 
-    run: async (client, message, args) => {
+    const noUserBanned = new RichEmbed()
+      .setColor('#7289da')
+      .setAuthor('Unban', authorLogo)
+      .setDescription('⚠️ That user is not banned from this guild.')
+      .setTimestamp()
+      .setFooter(message.author.username, message.author.displayAvatarURL);
 
-        const unban1 = new RichEmbed()
-        .setColor('#7289da')
-        .setAuthor("You need to provide an ID.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+    const [memberToUnban] = args;
+    args.splice(0, 1);
 
-        const unban2 = new RichEmbed()
-        .setColor('#7289da')
-        .setAuthor("Please provide a User ID to unban!")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
-
-        const unban3 = new RichEmbed()
-        .setColor('#7289da')
-        .setAuthor(`${bannedMember.tag} has been unbanned from the guild!`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
-
-        const unban4 = new RichEmbed()
-        .setColor('#7289da')
-        .setAuthor(`You don't have permission to use this command.`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
-
-        const unban5 = new RichEmbed()
-        .setColor('#7289da')
-        .setAuthor(`Bot does not have permissions to perform this command.`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
-
-
-
-
-
-    if(!message.member.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(unban4)
-
-		
-	if(isNaN(args[0])) return message.channel.send(unban1)
-    let bannedMember = await client.fetchUser(args[0])
-        if(!bannedMember) return message.channel.send(unban2)
-
-    let reason = args.slice(1).join(" ")
-        if(!reason) reason = "⚠️ | No reason given!"
-
-    if(!message.guild.me.hasPermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send(unban5)
-    message.delete()
-    try {
-        message.guild.unban(bannedMember, reason)
-        message.channel.send(unban3)
-    } catch(e) {
-        console.log(e.message)
+    if (!message.member.hasPermission(['BAN_MEMBERS', 'ADMINISTRATOR'])) {
+      return channel.send(userNoPermissionEmbed);
     }
 
-    let embed = new RichEmbed()
-    .setColor('#7289da')
-    .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL)
-    .addField("Moderation:", "unban")
-    .addField("Moderated on:", `${bannedMember.username} (${bannedMember.id})`)
-    .addField("Moderator:", message.author.username)
-    .addField("Reason:", reason)
-    .addField("Date:", message.createdAt.toLocaleString())
-    
-        let sChannel = message.guild.channels.find(c => c.name === "tut-modlogs")
-        sChannel.send(embed)
-
+    if (!message.guild.me.hasPermission(['BAN_MEMBERS', 'ADMINISTRATOR'])) {
+      return channel.send(botNoPermission);
     }
-}
+
+    if (!memberToUnban) {
+      return channel.send(noUserIDEmbed);
+    }
+
+    const reason = args.join(' ') || '⚠️ No reason given!';
+
+    const handleResolvedUnban = (user) => {
+      channel.send(unbannedEmbed(user));
+    };
+
+    const handleRejectedUnban = (r) => {
+      console.log(r);
+      channel.send(noUserBanned);
+    };
+
+    const handleResolvedUser = (user) => {
+      message.guild.unban(user.user.id, reason).then((r) => handleResolvedUnban(r, user.user), (r) => handleRejectedUnban(r));
+    };
+
+    const handleRejectedUser = (r) => {
+      console.log(r);
+      channel.send(noUserBanned);
+    };
+
+    message.guild.fetchBan(memberToUnban).then(handleResolvedUser, (r) => handleRejectedUser(r));
+  },
+};
