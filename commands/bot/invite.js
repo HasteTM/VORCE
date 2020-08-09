@@ -14,7 +14,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-        .setAuthor('Invite')
+        .setAuthor('Invite', 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
         .setColor("#7289da")
         .setThumbnail(client.user.displayAvatarURL)
         .setTitle("Click to invite Vorce Bot!", 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
