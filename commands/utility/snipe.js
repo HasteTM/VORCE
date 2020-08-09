@@ -8,16 +8,6 @@ module.exports = {
     const { channel } = message;
     const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
-    const noPermsEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Snipe', authorLogo)
-      .setDescription(`❗ You don't have permission to use this command.`)
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
-
-    if (!(message.member.hasPermission('ADMINISTRATOR'))) {
-      return channel.send(noPermsEmbed);
-    }
 
     const snipedEmbed = (msg, author, timeStamp) => new RichEmbed()
       .setColor('#7289da')
