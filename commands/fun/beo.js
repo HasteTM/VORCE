@@ -6,7 +6,6 @@ module.exports = {
 
     name: "beo",
 
-    aliases: ["androidslayer"],
 
     description: "pings bingo",
 
