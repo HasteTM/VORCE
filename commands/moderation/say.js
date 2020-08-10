@@ -1,7 +1,7 @@
 const { RichEmbed, DiscordAPIError } = require("discord.js");
 
 module.exports = {
-    name: "tsay",
+    name: "say",
     aliases: ["bc", "broadcast"],
     description: "Says your input via the bot",
     usage: "<input>",
