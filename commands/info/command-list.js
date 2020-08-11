@@ -4,9 +4,9 @@ const { RichEmbed } = require("discord.js");
 
 module.exports = {
 
-    name: "wiggle",
+    name: "commandlist",
 
-    description: "wiggle",
+    description: "shows list of commands",
 
     run: (client, message, args) => {
 
