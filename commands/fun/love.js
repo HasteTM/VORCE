@@ -9,7 +9,7 @@ module.exports = {
     usage: "[mention | id | username]",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         // Get a member from mention, id, or username
         let person = getMember(message, args[0]);
@@ -33,7 +33,7 @@ module.exports = {
 
         const embed = new RichEmbed()
             .setColor(defaultcolor)
-            .setAuthor('Love', 'https://cdn.discordapp.com/attachments/651589704772485131/740315596297732268/speak.png')
+            .setAuthor('Love')
             .addField(`⚠️ | **${person.displayName}** loves **${message.member.displayName}** this much:`,
             `💟 | ${Math.floor(love)}%\n\n${loveLevel}`);
 

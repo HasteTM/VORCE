@@ -8,35 +8,32 @@ module.exports = {
     usage: "<mention, id>",
     run: async (client, message, args) => {
 
+        let defaultcolor = `#000000`
+
         const nochannel1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor('Report', 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png')
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find a `#reports` channel")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL);
 
         const providereason = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor('Report', 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png')
         .setDescription("<a:crossmark1:742750308089856022> Please provide a reason for the report.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL);
 
         const cantreportthatmember = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor('Report', 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png')
         .setDescription("<a:crossmark1:742750308089856022> Can't report that member.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL);
 
         const couldntfindthatmember = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor('Report', 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png')
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, are they in the server?")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL);
 
-        let defaultcolor = `#7289da`
 
         if (message.deletable) message.delete();
 

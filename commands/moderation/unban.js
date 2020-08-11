@@ -9,42 +9,36 @@ module.exports = {
   description: 'Unbans a user from the guild.',
   run: async (client, message, args) => {
 
-    let defaultcolor = `#7289da`
+    let defaultcolor = `#000000`
 
     const { channel } = message;
-    const authorLogo = 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png';
 
     const noUserIDEmbed = new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Unban', authorLogo)
       .setDescription('a:crossmark1:742750308089856022> Please provide a user to unban!')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const userNoPermissionEmbed = new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Unban', authorLogo)
       .setDescription("a:crossmark1:742750308089856022> You don't have permission to use this command.")
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const botNoPermission = new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Unban', authorLogo)
       .setDescription('a:crossmark1:742750308089856022> Bot does not have permission to unban members.')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const unbannedEmbed = (bannedMember) => new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Unban', authorLogo)
       .setDescription(`<a:checkmark1:742750252666191902> **${bannedMember.username}#${bannedMember.discriminator}** has been unbanned from the guild!`)
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const noUserBanned = new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Unban', authorLogo)
       .setDescription('a:crossmark1:742750308089856022> That user is not banned from this guild.')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);

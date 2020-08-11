@@ -19,11 +19,12 @@ module.exports = {
       author,
       mentions,
     } = message;
+
+    let defaultcolor = `#000000`
     const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
     const notEnoughPermissionEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> You don\'t have permission to use this command.')
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
@@ -33,71 +34,61 @@ module.exports = {
     }
 
     const unknownError = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> An unknown error occured.')
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const noUserEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const errorEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> There was an error. Command usage:\n**-mute generate-role [name]**\n**-mute set-role [role]**\n**-mute [user]**')
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const roleNotFound = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> Coudln\'t find that role.')
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const setRoleFirst = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> You have to set a mute role with **-mute set-role [role]** first.')
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const couldntMute = (user) => new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription(`<a:crossmark1:742750308089856022> I couldn't mute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const successMute = (user) => new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription(`<a:checkmark1:742750252666191902> Successfully muted that member.\n**Member:** <@${user}>`)
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const generatedSuccessEmbed = (role) => new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription(`<a:checkmark1:742750252666191902> Successfully generated a mute role with the name <@&${role}>`)
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const successSetRole = (role) => new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription(`<a:checkmark1:742750252666191902> The guild's mute role is now: <@&${role}>`)
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);
 
     const alreadyMuted = (user) => new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('Mute', authorLogo)
+      .setColor(defaultcolor)
       .setDescription(`<a:crossmark1:742750308089856022> That member is already muted.\n**Member:** <@${user}>`)
       .setTimestamp()
       .setFooter(author.username, author.displayAvatarURL);

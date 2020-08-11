@@ -17,7 +17,7 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         const member = getMember(message, args.join(" "));
 
@@ -33,7 +33,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 // fix embeds later
-            .setAuthor('Userinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740317708553551922/bilgi.png')
+            .setAuthor('UserInfo')
 
             .setThumbnail(member.user.displayAvatarURL)
 

@@ -10,7 +10,7 @@ module.exports = {
 
     run: async (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
         
         const poll = args.join(" ");
 
@@ -28,7 +28,7 @@ module.exports = {
         } else {
             const poll2 = new RichEmbed()
             .setColor(defaultcolor)
-            .setAuthor('Poll', 'https://cdn.discordapp.com/attachments/651589704772485131/740315645106978876/hum.png')
+            .setAuthor('Poll')
             .setDescription(`${poll}`)
             .setTimestamp()
             .setFooter(`${message.author.username}`, message.author.avatarURL)

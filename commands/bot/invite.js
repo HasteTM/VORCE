@@ -12,11 +12,11 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         const embed = new RichEmbed()
 
-        .setAuthor('Invite', 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
+        .setAuthor('Invite')
         .setColor(defaultcolor)
         .setThumbnail(client.user.displayAvatarURL)
         .setTitle("Click to invite Vorce Bot!", 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')

@@ -7,7 +7,7 @@ module.exports = {
     description: "Clears the chat",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         const purge1 = new RichEmbed()
         .setColor(defaultcolor)

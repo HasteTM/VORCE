@@ -11,13 +11,13 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         const embed  = new RichEmbed()
 
         .setColor('#7289da')
-        .setDescription("*Make sure you have your DMs open!*")
-        .setAuthor('Check Direct Messages!')
+        .setAuthor('Help')
+        .setTitle('Check Direct Messages!')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

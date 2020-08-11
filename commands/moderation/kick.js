@@ -16,7 +16,7 @@ module.exports = {
 
     run: async (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         const canceled = new RichEmbed()
         .setColor(defaultcolor)
@@ -129,7 +129,7 @@ module.exports = {
 
         const embed = new RichEmbed()
 
-            .setAuthor('Kick', 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
+            .setAuthor('Kick')
 
             .setColor(defaultcolor)
 
@@ -143,7 +143,7 @@ module.exports = {
 
             .setColor(defaultcolor)
 
-            .setAuthor(`This verification becomes invalid after 30 minutes.`, 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
+            .setAuthor(`This verification becomes invalid after 30 minutes.`)
 
             .setDescription(`Do you want to kick ${toKick}?`)
 

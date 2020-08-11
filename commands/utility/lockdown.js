@@ -8,11 +8,11 @@ module.exports = {
   description: 'Locks the current channel.',
   run: (client, message) => {
 
-    let defaultcolor = `#7289da`
+    let defaultcolor = `#000000`
 
     const perms1 = new RichEmbed()
     .setColor(defaultcolor)
-    .setAuthor("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
+    .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
     .setTimestamp()
     .setFooter(message.author.username, message.author.displayAvatarURL)
 
@@ -24,14 +24,14 @@ module.exports = {
 
     const lockEmbed = new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Lockdown', 'https://cdn.discordapp.com/attachments/651589704772485131/740315645106978876/hum.png')
+      .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
       .setDescription('🔒 Locked the channel.');
 
     const unlockEmbed = new RichEmbed()
       .setColor(defaultcolor)
-      .setAuthor('Lockdown', 'https://cdn.discordapp.com/attachments/651589704772485131/740315645106978876/hum.png')
+      .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
       .setDescription('🔓 Unlocked the channel.');

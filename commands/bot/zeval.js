@@ -7,7 +7,7 @@ aliases: ["ze"],
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
 
-     let defaultcolor = `#7289da`
+     let defaultcolor = `#000000`
 
      if (message.author.id !== "403634335736922132") {
         return message.channel.send("<a:crossmark1:742750308089856022> You're not a Vorce Admin or a Developer!") 
@@ -30,7 +30,7 @@ run: async (client, message, args) => {
 
     let embed = new RichEmbed()
     .setColor(defaultcolor)
-    .setAuthor("Eval", "https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png")
+    .setAuthor("Eval")
     .addField("To evaluate:", `\`\`\`js\n${beautify(args.join(" "), { format: "js" })}\n\`\`\``)
     .addField("Evaluated:", evaluated);
 

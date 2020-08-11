@@ -6,19 +6,19 @@ module.exports = {
     usage: "<input>",
     run: (client, message, args) => {
 
-        let defaultcolor = `#7289da`
+        let defaultcolor = `#000000`
 
         message.delete();
 
         const say1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("<a:crossmark1:742750308089856022> You don't have permissions to use this command.")
+        .setDescription("<a:crossmark1:742750308089856022> You don't have permissions to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const say2 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("<a:crossmark1:742750308089856022> Please provide a message for me to say!")
+        .setDescription("<a:crossmark1:742750308089856022> Please provide a message for me to say!")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

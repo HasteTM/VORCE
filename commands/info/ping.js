@@ -5,13 +5,13 @@ module.exports = {
     description: "Returns latency and API ping",
     run: async (client, message, args) => {
 
-      let defaultcolor = `#7289da`
+      let defaultcolor = `#000000`
 
           const msg = await message.channel.send(`🏓 Pinging....`);
           let pembed = new Discord.RichEmbed()
           .setColor(defaultcolor)
           .setTitle("🏓 Pong!")
-          .setAuthor('Ping', 'https://cdn.discordapp.com/attachments/651589704772485131/740317708553551922/bilgi.png')
+          .setAuthor('Ping')
           .setThumbnail(client.user.displayAvatarURL)
           .addField("**Latency**", `${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms`)
           .addField("**API Latency**", `${Math.round(client.ping)}ms`)
