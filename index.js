@@ -5,6 +5,7 @@ const fs = require('fs');
 const { Client, Collection } = require('discord.js');
 const { config } = require('dotenv');
 const snipeStorage = require('./storage/snipe.json');
+const muteStorage = require('./storage/mute.json');
 
 const client = new Client({
   disableEveryone: true,
@@ -26,7 +27,7 @@ client.on('ready', () => {
   client.user.setStatus('dnd');
   const activitesList = [
     `${client.users.size} users`,
-    'for -help',
+    'for v!help',
     `${client.guilds.size} servers!`,
   ]; // creates an arraylist containing phrases you want your bot to switch through.
 
@@ -78,11 +79,17 @@ client.on('messageDelete', (message) => {
   fs.writeFileSync(snipeStorageFile, JSON.stringify(snipeStorage, null, 4));
 });
 
+client.on('guildMemberAdd', (member) => {
+  if (muteStorage[member.guild.id] && muteStorage[member.guild.id].mutedUsers.includes(member.user.id) && muteStorage[member.guild.id].muteRole) {
+    member.addRole(muteStorage[member.guild.id].muteRole);
+  }
+});
+
 // music module below do not change
 const bot = new MusicBot({
   token: `${process.env.token}`,
   ytApiKey: `${process.env.YTapikey}`,
-  prefix: '-',
+  prefix: `-`,
   game: ' ',
 });
 

@@ -24,10 +24,10 @@ module.exports = {
         const dms = new RichEmbed()
 
         .setColor(defaultcolor)
-        .addField('<:work:740255311264350268> | Moderation', '`say` | `purge` | `ban` | `kick` | `unban`')
+        .addField('<:work:740255311264350268> | Moderation', '`say` | `purge` | `ban` | `kick` | `unban` | `mute` | `unmute`')
         .addField('<:botemoji:740338962333302785> | Bot', '`guilds` | `stats` | `invite` | `support` | `botstaff` |')
         .addField('<:bilgi:740317093018468483> |  Info', '`avatar` | `serverinfo` | `userinfo` | `ping` | `help`')
-        .addField('<:speak:740255369737273454> | Fun', '`meme` | `rps` | `love` | `gaymeter`')
+        .addField('<:speak:740255369737273454> | Fun', '`meme` | `rps` | `love` | `gaymeter` | `wiggle`')
         .addField('<:music:740255395402219591> | Music', '`play` | `pause` | `skip` | `stop` | `volume` | `queue` | `remove` | `np`')
         .addField('<:hum:740255276099305472> | Utility','`poll` | `lockdown` | `role` | `announce` | `nuke`| `snipe`')
         .addField('<:tickee:740255341408682015> | Badge Documentation','`staff` | `partner` | `bughunter` | `vbdeveloper` | `hypesquadevents` | `earlysupporter`')

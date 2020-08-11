@@ -25,47 +25,47 @@ module.exports = {
     const noUser = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription('⚠️ You need to mention a user to add a role to.');
+      .setDescription('<a:crossmark1:742750308089856022> You need to mention a user to add a role to.');
 
     const noMethod = (methods) => new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription(`⚠️ Please choose one of these methods: \`${methods.join(', ')}\``);
+      .setDescription(`<a:crossmark1:742750308089856022> Please choose one of these methods: \`${methods.join(', ')}\``);
 
     const noRoles = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription('⚠️ Couldn\'t find the role.\nPlease specify one or multiple roles split with commas.');
+      .setDescription('<a:crossmark1:742750308089856022> Couldn\'t find the role.\nPlease specify one or multiple roles split with commas.');
 
     const unknownError = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription('⚠️ An unknown error occured.');
+      .setDescription('<a:crossmark1:742750308089856022> An unknown error occured.');
 
     const couldntAddRoles = (roles, user) => new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription(`⚠️ Couldn't add the role${roles.length > 1 ? 's' : ''} to the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
+      .setDescription(`<a:crossmark1:742750308089856022> Couldn't add the role${roles.length > 1 ? 's' : ''} to the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
 
     const couldntRemoveRoles = (roles, user) => new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription(`⚠️ Couldn't remove the role${roles.length > 1 ? 's' : ''} from the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
+      .setDescription(`<a:crossmark1:742750308089856022> Couldn't remove the role${roles.length > 1 ? 's' : ''} from the member.\nAre you sure my role is high enough?\nRole${roles.length > 1 ? 's' : ''} affected: ${roles.join(', ')}\nMember: ${user}`);
 
     const noChanges = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription('⚠️ No changes were made.');
+      .setDescription('<a:crossmark1:742750308089856022> No changes were made.');
 
     const successAddRole = (roles, user) => new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription(`✅ Successfully added the role${roles.length > 1 ? 's' : ''}.\nRole${roles.length > 1 ? 's' : ''} added: ${roles.join(', ')}\nMember: ${user}`);
+      .setDescription(`<a:checkmark1:742750252666191902> Successfully added the role${roles.length > 1 ? 's' : ''}.\nRole${roles.length > 1 ? 's' : ''} added: ${roles.join(', ')}\nMember: ${user}`);
 
     const successRemoveRole = (roles, user) => new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Roles', authorLogo)
-      .setDescription(`✅ Successfully removed the role${roles.length > 1 ? 's' : ''}.\nRole${roles.length > 1 ? 's' : ''} removed: ${roles.join(', ')}\nMember: ${user}`);
+      .setDescription(`<a:checkmark1:742750252666191902> Successfully removed the role${roles.length > 1 ? 's' : ''}.\nRole${roles.length > 1 ? 's' : ''} removed: ${roles.join(', ')}\nMember: ${user}`);
 
     const { channel } = message;
     const mentionedUser = message.mentions.members.first() || message.member.guild.members.find((user) => user.id === args[1]) || undefined;

@@ -17,35 +17,35 @@ module.exports = {
     const noUserIDEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Unban', authorLogo)
-      .setDescription('⚠️ Please provide a user to unban!')
+      .setDescription('a:crossmark1:742750308089856022> Please provide a user to unban!')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const userNoPermissionEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Unban', authorLogo)
-      .setDescription("❗ You don't have permission to use this command.")
+      .setDescription("a:crossmark1:742750308089856022> You don't have permission to use this command.")
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const botNoPermission = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Unban', authorLogo)
-      .setDescription('❗ Bot does not have permission to unban members.')
+      .setDescription('a:crossmark1:742750308089856022> Bot does not have permission to unban members.')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const unbannedEmbed = (bannedMember) => new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Unban', authorLogo)
-      .setDescription(`✅ **${bannedMember.username}#${bannedMember.discriminator}** has been unbanned from the guild!`)
+      .setDescription(`<a:checkmark1:742750252666191902> **${bannedMember.username}#${bannedMember.discriminator}** has been unbanned from the guild!`)
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const noUserBanned = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Unban', authorLogo)
-      .setDescription('⚠️ That user is not banned from this guild.')
+      .setDescription('a:crossmark1:742750308089856022> That user is not banned from this guild.')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 

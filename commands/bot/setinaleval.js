@@ -10,12 +10,12 @@ run: async (client, message, args) => {
      let defaultcolor = `#7289da`
 
      if (message.author.id !== "709151479918755890") {
-        return message.channel.send("❗ You're not a Vorce Admin or a Developer!") 
+        return message.channel.send("<a:crossmark1:742750308089856022> You're not a Vorce Admin or a Developer!") 
         .then(m => m.delete(5000));
     }
 
     if (!args[0]) {
-         message.channel.send("You need to evaluate something...")
+         message.channel.send("<a:crossmark1:742750308089856022> You need to evaluate something...")
               .then(m => m.delete(5000));
 
     }

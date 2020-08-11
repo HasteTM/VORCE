@@ -20,50 +20,50 @@ module.exports = {
 
         const canceled = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor(`⚠️ Ban has been canceled!`)
+        .setDescription(`<a:crossmark1:742750308089856022> Ban has been canceled!`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor(`⚠️ Please provide a person to ban.`)
+        .setDescription(`<a:crossmark1:742750308089856022> Please provide a person to ban.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban2 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor('⚠️ Please provide a reason to ban.')
+        .setDescription('<a:crossmark1:742750308089856022> Please provide a reason to ban.')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
 
         const ban3 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("❗ You don't have permission to use this command.")
+        .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban4 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("❗ Bot does not have permission to ban members.")
+        .setDescription("<a:crossmark1:742750308089856022> Bot does not have permission to ban members.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban5 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("⚠️ Couldn't find that member, try again")
+        .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, try again")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban6 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("⚠️ You can't ban yourself.")
+        .setDescription("<a:crossmark1:742750308089856022> You can't ban yourself.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban7 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("⚠️ I can't ban that member due to role hierarchy.")
+        .setDescription("<a:crossmark1:742750308089856022> I can't ban that member due to role hierarchy.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

@@ -22,7 +22,7 @@ module.exports = {
     const nothingToSnipeEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Snipe', authorLogo)
-      .setDescription('⚠️ There is nothing to snipe in this channel.')
+      .setDescription('<a:crossmark1:742750308089856022> There is nothing to snipe in this channel.')
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 

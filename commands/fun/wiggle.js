@@ -13,7 +13,7 @@ module.exports = {
         message.delete();
 
         if (!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send('Only cool kids have access to this command :/')
+            return message.channel.send('<a:crossmark1:742750308089856022> Only cool kids have access to this command :/')
             .then(m => m.delete(5000));
           }
 

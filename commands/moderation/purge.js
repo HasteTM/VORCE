@@ -11,19 +11,19 @@ module.exports = {
 
         const purge1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor(`❗ You don't have permissions to use this command.`)
+        .setAuthor(`<a:crossmark1:742750308089856022> You don't have permissions to use this command.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge2 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor(`⚠️ Please enter a number [0 doesn't work].`)
+        .setAuthor(`<a:crossmark1:742750308089856022> Please enter a number [0 doesn't work].`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge3 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor(`❗ Bot does not have permission to delete/manage messages.`)
+        .setAuthor(`<a:crossmark1:742750308089856022> Bot does not have permission to delete/manage messages.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         

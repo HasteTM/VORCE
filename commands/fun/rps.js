@@ -16,7 +16,7 @@ module.exports = {
             .setColor(defaultcolor)
             .setAuthor('RPS', 'https://cdn.discordapp.com/attachments/651589704772485131/740315596297732268/speak.png')
             .setFooter(message.guild.me.displayName, client.user.displayAvatarURL)
-            .setDescription("⚠️ Add a reaction to one of these emojis to play the game!")
+            .setDescription("Add a reaction to one of these emojis to play the game!")
             .setTimestamp();
 
         const m = await message.channel.send(embed);

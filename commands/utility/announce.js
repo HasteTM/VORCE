@@ -18,13 +18,13 @@ module.exports = {
 
         const say1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("❗ You don't have permission to use this command.")
+        .setAuthor("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const say2 = new RichEmbed()
         .setColor(defaultcolor)
-        .setAuthor("⚠️ Please provide a message for me to announce!")
+        .setAuthor("<a:crossmark1:742750308089856022> Please provide a message for me to announce!")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
