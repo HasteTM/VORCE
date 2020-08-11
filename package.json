@@ -22,7 +22,7 @@
     "random-puppy": "^1.1.0",
     "superagent": "^5.3.1",
     "utils": "^0.3.1",
-    "vorce-music-module": "^2.0.4"
+    "vorce-music-module": "^2.0.5"
   },
   "devDependencies": {},
   "scripts": {
