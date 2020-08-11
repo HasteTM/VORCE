@@ -6,6 +6,9 @@ name: "deval",
 aliases: ["de"],
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
+
+     let defaultcolor = `#7289da`
+
      if (message.author.id !== "651515978231971900") {
         return message.channel.send("❗ You're not a Vorce Admin or a Developer!") 
         .then(m => m.delete(5000));
@@ -26,7 +29,7 @@ run: async (client, message, args) => {
     const evaluated = eval(toEval);
 
     let embed = new RichEmbed()
-    .setColor("#7289da")
+    .setColor(defaultcolor)
     .setAuthor("Eval", 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
     .addField("To evaluate:", `\`\`\`js\n${beautify(args.join(" "), { format: "js" })}\n\`\`\``)
     .addField("Evaluated:", evaluated);

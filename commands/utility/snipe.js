@@ -5,19 +5,22 @@ module.exports = {
   name: 'snipe',
   description: 'Displays the last deleted message.',
   run: (client, message) => {
+
+    let defaultcolor = `#7289da`
+
     const { channel } = message;
     const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
 
     const snipedEmbed = (msg, author, timeStamp) => new RichEmbed()
-      .setColor('#7289da')
+      .setColor(defaultcolor)
       .setAuthor('Snipe', authorLogo)
       .setDescription(`Last message:\n**Deleted at:** ${timeStamp}\n**Author:** ${author}\n**Content:** ${msg}`)
       .setTimestamp()
       .setFooter(message.author.username, message.author.displayAvatarURL);
 
     const nothingToSnipeEmbed = new RichEmbed()
-      .setColor('#7289da')
+      .setColor(defaultcolor)
       .setAuthor('Snipe', authorLogo)
       .setDescription('⚠️ There is nothing to snipe in this channel.')
       .setTimestamp()

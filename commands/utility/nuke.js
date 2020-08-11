@@ -5,8 +5,10 @@ module.exports = {
   description: 'Nukes the current channel.',
   run: (client, message) => {
 
+    let defaultcolor = `#7289da`
+
     const perms1 = new RichEmbed()
-    .setColor('#7289da')
+    .setColor(defaultcolor)
     .setAuthor("❗ You don't have permission to use this command.")
     .setTimestamp()
     .setFooter(message.author.username, message.author.displayAvatarURL)

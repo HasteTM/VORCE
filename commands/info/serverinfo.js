@@ -9,6 +9,8 @@ module.exports = {
 
     run: (client, message, args) => {
 
+        let defaultcolor = `#7289da`
+
         function checkDays(date) {
             let now = new Date();
             let diff = now.getTime() - date.getTime();
@@ -35,7 +37,7 @@ module.exports = {
         };
         let msg = message;
         const embed = new Discord.RichEmbed()
-            .setColor('#7289da')
+            .setColor(defaultcolor)
             .setAuthor('Serverinfo', 'https://cdn.discordapp.com/attachments/651589704772485131/740317708553551922/bilgi.png')
             .addField("Name", message.guild.name, true)
             .addField("ID", message.guild.id, true)

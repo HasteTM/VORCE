@@ -2,20 +2,22 @@ const { RichEmbed, DiscordAPIError } = require("discord.js");
 
 module.exports = {
     name: "say",
-    aliases: ["bc", "broadcast"],
     description: "Says your input via the bot",
     usage: "<input>",
     run: (client, message, args) => {
+
+        let defaultcolor = `#7289da`
+
         message.delete();
 
         const say1 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("❗ You don't have permissions to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const say2 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("⚠️ Please provide a message for me to say!")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)

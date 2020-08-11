@@ -9,6 +9,8 @@ module.exports = {
 
     run: (client, message, args) => {
 
+      let defaultcolor = `#7289da`
+
       // const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
       function duration(ms) {
           const sec = Math.floor((ms / 1000) % 60).toString()
@@ -32,7 +34,7 @@ module.exports = {
         `)
         .setTimestamp()
         .setFooter(`${message.author.username}`, message.author.avatarURL)
-        .setColor('#7289da')
+        .setColor(defaultcolor)
     message.channel.send(embed);
 
 

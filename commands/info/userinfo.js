@@ -17,6 +17,8 @@ module.exports = {
 
     run: (client, message, args) => {
 
+        let defaultcolor = `#7289da`
+
         const member = getMember(message, args.join(" "));
 
         const joined = formatDate(member.joinedAt);
@@ -35,7 +37,7 @@ module.exports = {
 
             .setThumbnail(member.user.displayAvatarURL)
 
-            .setColor('#7289da')
+            .setColor(defaultcolor)
 
             .addField('Member information:', stripIndents` Display name: ${member.displayName}
 

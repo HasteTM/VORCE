@@ -16,51 +16,53 @@ module.exports = {
 
     run: async (client, message, args) => {
 
+        let defaultcolor = `#7289da`
+
         const canceled = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor(`⚠️ Ban has been canceled!`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban1 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor(`⚠️ Please provide a person to ban.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban2 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor('⚠️ Please provide a reason to ban.')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
 
         const ban3 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("❗ You don't have permission to use this command.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban4 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("❗ Bot does not have permission to ban members.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban5 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("⚠️ Couldn't find that member, try again")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban6 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("⚠️ You can't ban yourself.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const ban7 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor("⚠️ I can't ban that member due to role hierarchy.")
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
@@ -132,7 +134,7 @@ module.exports = {
 
             .setAuthor('Ban', 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
 
-            .setColor("#7289da")
+            .setColor(defaultcolor)
 
             .setDescription(stripIndents`** Banned member:** ${toBan}
 
@@ -142,7 +144,7 @@ module.exports = {
 
         const promptEmbed = new RichEmbed()
 
-            .setColor("#7289da")
+            .setColor(defaultcolor)
 
             .setAuthor(`This verification becomes invalid after 30 minutes.`, 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
 

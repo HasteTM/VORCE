@@ -11,6 +11,8 @@ module.exports = {
 
     run: (client, message, args) => {
 
+        let defaultcolor = `#7289da`
+
         const embed  = new RichEmbed()
 
         .setColor('#7289da')
@@ -21,7 +23,7 @@ module.exports = {
 
         const dms = new RichEmbed()
 
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .addField('<:work:740255311264350268> | Moderation', '`say` | `purge` | `ban` | `kick` | `unban`')
         .addField('<:botemoji:740338962333302785> | Bot', '`guilds` | `stats` | `invite` | `support` | `botstaff` |')
         .addField('<:bilgi:740317093018468483> |  Info', '`avatar` | `serverinfo` | `userinfo` | `ping` | `help`')

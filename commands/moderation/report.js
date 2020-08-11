@@ -7,6 +7,9 @@ module.exports = {
     description: "Reports a member",
     usage: "<mention, id>",
     run: async (client, message, args) => {
+
+        let defaultcolor = `#7289da`
+
         if (message.deletable) message.delete();
 
         let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
@@ -26,7 +29,7 @@ module.exports = {
             return message.channel.send("⚠️ Couldn't find a `#reports` channel").then(m => m.delete(5000));
 
         const embed = new RichEmbed()
-            .setColor("#7289da")
+            .setColor(defaultcolor)
             .setTimestamp()
             .setFooter(message.guild.name, message.guild.iconURL)
             .setAuthor("Reported member", rMember.user.displayAvatarURL)

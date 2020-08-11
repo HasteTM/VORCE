@@ -7,20 +7,22 @@ module.exports = {
     description: "Clears the chat",
     run: async (client, message, args) => {
 
+        let defaultcolor = `#7289da`
+
         const purge1 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor(`❗ You don't have permissions to use this command.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge2 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor(`⚠️ Please enter a number [0 doesn't work].`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
         
         const purge3 = new RichEmbed()
-        .setColor('#7289da')
+        .setColor(defaultcolor)
         .setAuthor(`❗ Bot does not have permission to delete/manage messages.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)

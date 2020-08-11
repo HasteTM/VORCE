@@ -19,6 +19,8 @@ module.exports = {
 
     run: (client, message, args) => {
 
+        let defaultcolor = `#7289da`
+
         const member = getMember(message, args.join(" "));
 
         const joined = formatDate(member.joinedAt);
@@ -41,7 +43,7 @@ module.exports = {
 
             .setImage(member.user.displayAvatarURL)
 
-            .setColor('#7289da')
+            .setColor(defaultcolor)
 
         message.channel.send(embed);
 

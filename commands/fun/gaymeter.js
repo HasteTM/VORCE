@@ -7,6 +7,9 @@ module.exports = {
     description: "Calculates the gayness of a member",
     usage: "[mention | id | username]",
     run: async (client, message, args) => {
+
+        let defaultcolor = `#7289da`
+
         // Get a member from mention, id, or username
         let person = getMember(message, args[0]);
 
@@ -28,7 +31,7 @@ module.exports = {
         const loveLevel = "🏳️‍🌈".repeat(loveIndex) + "🏴".repeat(10 - loveIndex);
 
         const embed = new RichEmbed()
-            .setColor("#7289da")
+            .setColor(defaultcolor)
             .setAuthor('Gaymeter', 'https://cdn.discordapp.com/attachments/651589704772485131/740315596297732268/speak.png')
             .setDescription(`**${person.displayName}** is ${Math.floor(love)}% gay`);
 
