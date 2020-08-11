@@ -3,7 +3,7 @@ module.exports = {
 
     name: "serverinfo",
 
-    aliases: ["sinfo"],
+    aliases: "sinfo",
 
     description: "Returns Bot information",
 

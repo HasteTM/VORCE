@@ -7,9 +7,9 @@ const { getMember, formatDate } = require("../../functions.js");
 
 module.exports = {
 
-    name: "whois",
+    name: "userinfo",
 
-    aliases: ["userinfo"],
+    aliases: "whois",
 
     description: "Returns user information",
 
