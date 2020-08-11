@@ -27,7 +27,7 @@ client.on('ready', () => {
   client.user.setStatus('dnd');
   const activitesList = [
     `${client.users.size} users`,
-    'for v!help',
+    'for -help',
     `${client.guilds.size} servers!`,
   ]; // creates an arraylist containing phrases you want your bot to switch through.
 
