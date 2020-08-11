@@ -13,26 +13,22 @@ module.exports = {
         const nochannel1 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find a `#reports` channel")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL);
+
 
         const providereason = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Please provide a reason for the report.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL);
+
 
         const cantreportthatmember = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Can't report that member.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL);
+
 
         const couldntfindthatmember = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, are they in the server?")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL);
+
 
 
         if (message.deletable) message.delete();
@@ -40,18 +36,18 @@ module.exports = {
         let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         if (!rMember)
-            return message.channel.send(couldntfindthatmember).then(m => m.delete(5000));
+            return message.channel.send(couldntfindthatmember)
 
         if (rMember.hasPermission("BAN_MEMBERS") || rMember.user.bot)
-            return message.channel.send(cantreportthatmember).then(m => m.delete(5000));
+            return message.channel.send(cantreportthatmember)
 
         if (!args[1])
-            return message.channel.send(providereason).then(m => m.delete(5000));
+            return message.channel.send(providereason)
         
         const channel = message.guild.channels.find(c => c.name === "reports")
             
         if (!channel)
-            return message.channel.send(nochannel1).then(m => m.delete(5000));
+            return message.channel.send(nochannel1)
 
         const embed = new RichEmbed()
             .setColor(defaultcolor)

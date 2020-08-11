@@ -21,50 +21,42 @@ module.exports = {
         const canceled = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription(`<a:crossmark1:742750308089856022> Kick has been canceled!`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const kick1 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription(`<a:crossmark1:742750308089856022> Please provide a member to kick.`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const kick2 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription('<a:crossmark1:742750308089856022> Please provide a reason to kick.')
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         
         const kick3 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         
         const kick4 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Bot does not have permission to kick members.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         
         const kick5 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, try again")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         
         const kick6 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> You can't kick yourself.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         
         const kick7 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> I can't kick that member due to role hierarchy.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
         
         const logChannel = message.guild.channels.find(c => c.name === "logs34978937458") || message.channel;
 
@@ -74,7 +66,6 @@ module.exports = {
 
             return message.channel.send(kick1)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -82,7 +73,6 @@ module.exports = {
 
             return message.channel.send(kick2)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -90,7 +80,6 @@ module.exports = {
 
             return message.channel.send(kick3)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -98,7 +87,6 @@ module.exports = {
 
             return message.channel.send(kick4)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -107,7 +95,6 @@ module.exports = {
         if (!toKick) {
 
             return message.channel.send(kick5)
-                .then(m => m.delete(5000));
 
         }
 
@@ -115,7 +102,6 @@ module.exports = {
 
             return message.channel.send(kick6)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -123,7 +109,6 @@ module.exports = {
 
             return message.channel.send(kick7)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -171,7 +156,6 @@ module.exports = {
 
                 message.channel.send(canceled)
 
-                    .then(m => m.delete(10000));
 
             }
 

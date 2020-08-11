@@ -13,12 +13,11 @@ module.exports = {
     const perms1 = new RichEmbed()
     .setColor(defaultcolor)
     .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
-    .setTimestamp()
-    .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
     if (!message.member.hasPermission('ADMINISTRATOR')) {
       return message.channel.send(perms1)
-      .then(m => m.delete(5000));
+
     }
 
 

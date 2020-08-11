@@ -15,25 +15,22 @@ module.exports = {
         .setColor(defaultcolor)
         .setAuthor('Announcement')
         .setDescription(`${args.join(" ")}`)
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const say1 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
 
         const say2 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Please provide a message for me to announce!")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         if (!message.member.hasPermission("ADMINISTRATOR"))
-            return message.channel.send(say1).then(m => m.delete(5000));
+            return message.channel.send(say1)
 
         if (args.length < 0)
-            return message.channel.send(say2).then(m => m.delete(5000));
+            return message.channel.send(say2)
 
         const roleColor = message.guild.me.highestRole.hexColor;
 

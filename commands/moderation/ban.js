@@ -21,51 +21,43 @@ module.exports = {
         const canceled = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription(`<a:crossmark1:742750308089856022> Ban has been canceled!`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban1 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription(`<a:crossmark1:742750308089856022> Please provide a member to ban.`)
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban2 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription('<a:crossmark1:742750308089856022> Please provide a reason to ban.')
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
 
         const ban3 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban4 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Bot does not have permission to ban members.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban5 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, try again")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban6 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> You can't ban yourself.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const ban7 = new RichEmbed()
         .setColor(defaultcolor)
         .setDescription("<a:crossmark1:742750308089856022> I can't ban that member due to role hierarchy.")
-        .setTimestamp()
-        .setFooter(message.author.username, message.author.displayAvatarURL)
+
 
         const logChannel = message.guild.channels.find(c => c.name === "logs034768734867") || message.channel;
 
@@ -75,7 +67,6 @@ module.exports = {
 
             return message.channel.send(ban1)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -83,7 +74,6 @@ module.exports = {
 
             return message.channel.send(ban2)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -91,7 +81,6 @@ module.exports = {
 
             return message.channel.send(ban3)
 
-                .then(m => m.delete(5000));
 
         
 
@@ -101,7 +90,6 @@ module.exports = {
 
             return message.channel.send(ban4)
 
-                .then(m => m.delete(5000));
 
         }
         const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
@@ -110,7 +98,6 @@ module.exports = {
 
             return message.channel.send(ban5)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -118,7 +105,6 @@ module.exports = {
 
             return message.channel.send(ban6)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -126,7 +112,6 @@ module.exports = {
 
             return message.channel.send(ban7)
 
-                .then(m => m.delete(5000));
 
         }
 
@@ -174,7 +159,6 @@ module.exports = {
 
                 message.channel.send(canceled)
 
-                    .then(m => m.delete(10000));
 
             }
 

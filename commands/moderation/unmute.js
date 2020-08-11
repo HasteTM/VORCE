@@ -26,8 +26,7 @@ module.exports = {
     const notEnoughPermissionEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> You don\'t have permission to use this command.')
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     if (!(member.hasPermission('ADMINISTRATOR') || member.hasPermission('MANAGE_MEMBERS'))) {
       return channel.send(notEnoughPermissionEmbed);
@@ -36,38 +35,32 @@ module.exports = {
     const errorEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> There was an error. \nYou have to set up the **mute** command first.\n**-mute generate-role [name]**\n**-mute set-role [role]**')
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     const notMutedEmbed = (user) => new RichEmbed()
       .setColor(defaultcolor)
       .setDescription(`<a:crossmark1:742750308089856022> That member is not muted.\n**Member:** <@${user}>`)
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     const userNotFoundEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> Couldn\'t find that user.')
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     const noUserEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     const couldntUnMute = (user) => new RichEmbed()
       .setColor(defaultcolor)
       .setDescription(`<a:crossmark1:742750308089856022> I couldn't unmute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     const successUnMute = (user) => new RichEmbed()
       .setColor(defaultcolor)
       .setDescription(`<a:checkmark1:742750252666191902> Successfully unmuted that member.\n**Member:** <@${user}>`)
-      .setTimestamp()
-      .setFooter(author.username, author.displayAvatarURL);
+
 
     if (!muteStorage[guild.id]) {
       return channel.send(errorEmbed);
