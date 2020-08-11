@@ -14,8 +14,8 @@ module.exports = {
         const embed = new RichEmbed()
         .setColor(defaultcolor)
         .setAuthor('Botstaff', 'https://cdn.discordapp.com/attachments/651589704772485131/740339977195618367/72f9c1232011ff2836495dbca55604d7.png')
-        .addField('Founder', '<@651515978231971900>')
-        .addField('Developers',' <@522080989057515533>,  <@319516807297892371>,  <@709151479918755890>,  <@709523716333109369>')
+        .addField('Founder', '<@651515978231971900>', '<@709151479918755890>')
+        .addField('Developers',' <@522080989057515533>,  <@319516807297892371>, <@709523716333109369>')
         .addField('Bot Admins', '<@403634335736922132>,  <@698306752508198972>,  <@642462432643514368>,  <@720396300012617869>')
         message.channel.send(embed);
 
