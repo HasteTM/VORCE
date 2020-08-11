@@ -16,6 +16,8 @@ module.exports = {
 
     run: async (client, message, args) => {
 
+      let defaultcolor = `#7289da`
+
         if (!message.member.permissions.any(["ADMINISTRATOR", "MANAGE_CHANNELS"])) {
             return message.channel.send("Oopsie, you don't have any rights to do this.");
           }
