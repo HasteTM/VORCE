@@ -26,7 +26,7 @@ module.exports = {
 
         const ban1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setDescription(`<a:crossmark1:742750308089856022> Please provide a person to ban.`)
+        .setDescription(`<a:crossmark1:742750308089856022> Please provide a member to ban.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 

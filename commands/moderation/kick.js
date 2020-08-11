@@ -26,7 +26,7 @@ module.exports = {
 
         const kick1 = new RichEmbed()
         .setColor(defaultcolor)
-        .setDescription(`<a:crossmark1:742750308089856022> Please provide a person to kick.`)
+        .setDescription(`<a:crossmark1:742750308089856022> Please provide a member to kick.`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
 
