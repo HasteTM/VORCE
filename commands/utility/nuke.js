@@ -1,7 +1,7 @@
 const { RichEmbed } = require('discord.js');
 
 module.exports = {
-  name: 'tnuke',
+  name: 'nuke',
   description: 'Nukes the current channel.',
   run: (client, message) => {
 
