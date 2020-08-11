@@ -15,8 +15,7 @@ module.exports = {
 
         const embed  = new RichEmbed()
 
-        .setColor('#7289da')
-        .setAuthor('Help')
+        .setColor(defaultcolor)
         .setTitle('Check Direct Messages!')
         .setTimestamp()
         .setFooter(message.author.username, message.author.displayAvatarURL)
