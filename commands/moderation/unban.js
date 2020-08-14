@@ -15,17 +15,17 @@ module.exports = {
 
     const noUserIDEmbed = new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription('a:crossmark1:742750308089856022> Please provide a user to unban!')
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a user to unban!')
 
 
     const userNoPermissionEmbed = new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription("a:crossmark1:742750308089856022> You don't have permission to use this command.")
+      .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 
     const botNoPermission = new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription('a:crossmark1:742750308089856022> Bot does not have permission to unban members.')
+      .setDescription('<a:crossmark1:742750308089856022> Bot does not have permission to unban members.')
 
 
     const unbannedEmbed = (bannedMember) => new RichEmbed()
@@ -35,7 +35,7 @@ module.exports = {
 
     const noUserBanned = new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription('a:crossmark1:742750308089856022> That user is not banned from this guild.')
+      .setDescription('<a:crossmark1:742750308089856022> That user is not banned from this guild.')
 
 
     const [memberToUnban] = args;
