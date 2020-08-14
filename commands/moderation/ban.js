@@ -39,7 +39,7 @@ module.exports = {
       .setAuthor("<a:crossmark1:742750308089856022> I can't ban that member due to role hierarchy.")
 
 
-    const [user] = args[0];
+    const [user] = args;
 
     if (!user) {
       return message.channel.send(noUserEmbed)
