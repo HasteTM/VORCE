@@ -7,57 +7,53 @@ module.exports = {
   usage: '<id | mention>',
 
   run: async (client, message, args) => {
+    let defaultcolor = `#000000`
+
     const noUserEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('⚠️ Please provide a person to kick.')
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setColor(defaultcolor)
+      .setAuthor('<a:crossmark1:742750308089856022> Please provide a person to kick.')
+
 
     const noPermsUserEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor("❗ You don't have permission to use this command.")
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setColor(defaultcolor)
+      .setAuthor("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
+
 
     const noPermsBotEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor('❗ Bot does not have permission to kick members.')
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setColor(defaultcolor)
+      .setAuthor('<a:crossmark1:742750308089856022> Bot does not have permission to kick members.')
+
 
     const couldntFindMemberEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor("⚠️ Couldn't find that member.")
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setColor(defaultcolor)
+      .setAuthor("<a:crossmark1:742750308089856022> Couldn't find that member.")
+
 
     const cantKickSelfEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor("⚠️ You can't kick yourself.")
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setColor(defaultcolor)
+      .setAuthor("<a:crossmark1:742750308089856022> You can't kick yourself.")
+
 
     const roleNotHighEnoughEmbed = new RichEmbed()
-      .setColor('#7289da')
-      .setAuthor("⚠️ I can't kick that member due to role hierarchy.")
-      .setTimestamp()
-      .setFooter(message.author.username, message.author.displayAvatarURL);
+      .setColor(defaultcolor)
+      .setAuthor("<a:crossmark1:742750308089856022> I can't kick that member due to role hierarchy.")
+
 
     const [user] = args;
 
     if (!user) {
       return message.channel.send(noUserEmbed)
-        .then((m) => m.delete(5000));
+
     }
 
     if (!message.member.hasPermission('KICK_MEMBERS')) {
       return message.channel.send(noPermsUserEmbed)
-        .then((m) => m.delete(5000));
+
     }
 
     if (!message.guild.me.hasPermission('KICK_MEMBERS')) {
       return message.channel.send(noPermsBotEmbed)
-        .then((m) => m.delete(5000));
+
     }
 
     const toKick = message.mentions.members.first() || message.guild.members.get(user);
@@ -65,22 +61,22 @@ module.exports = {
 
     if (!toKick) {
       return message.channel.send(couldntFindMemberEmbed)
-        .then((m) => m.delete(5000));
+
     }
 
     if (toKick.id === message.author.id) {
       return message.channel.send(cantKickSelfEmbed)
-        .then((m) => m.delete(5000));
+
     }
 
     if (!toKick.kickable) {
       return message.channel.send(roleNotHighEnoughEmbed)
-        .then((m) => m.delete(5000));
+
     }
 
     const successKickEmbed = new RichEmbed()
-      .setAuthor('Kick', 'https://cdn.discordapp.com/attachments/651589704772485131/740315492023009431/work.png')
-      .setColor('#7289da')
+      .setAuthor('Kick')
+      .setColor(defaultcolor)
       .setDescription(`** Kicked member:** ${toKick}
             ** Kicked by:** ${message.member}
             ** Reason:** ${args.join(' ') || 'No reason provided.'}`);
