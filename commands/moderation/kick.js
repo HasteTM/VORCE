@@ -41,7 +41,7 @@ module.exports = {
       .setDescription("<a:crossmark1:742750308089856022> I can't kick that member due to role hierarchy.")
 
 
-    const [user] = args;
+      const [user] = args;
 
     if (!user) {
       return message.channel.send(noUserEmbed)
