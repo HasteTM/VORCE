@@ -49,8 +49,7 @@ module.exports = {
             .addField("Roles", message.guild.roles.size, true)
             .addField("Creation Date", `${msg.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(msg.channel.guild.createdAt)})`, true)
             .setThumbnail(message.guild.iconURL)
-            .setTimestamp()
-            .setFooter(`${message.author.username}`, message.author.avatarURL)
+
         msg.channel.send({embed});
     }
 }
