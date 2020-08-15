@@ -8,15 +8,17 @@ module.exports = {
 
         let defaultcolor = `#000000`
 
+        let rederrorcolor = `#c4121b`
+
         message.delete();
 
         const say1 = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription("<a:crossmark1:742750308089856022> You don't have permissions to use this command.")
 
 
         const say2 = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription("<a:crossmark1:742750308089856022> Please provide a message for me to say!")
 
         if (!message.member.hasPermission("ADMINISTRATOR"))

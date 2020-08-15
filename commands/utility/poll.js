@@ -11,14 +11,16 @@ module.exports = {
     run: async (client, message, args) => {
 
         let defaultcolor = `#000000`
+
+        let rederrorcolor = `#c4121b`
         
         const poll = args.join(" ");
 
         if(!poll) {
             
             const poll1 = new RichEmbed()
-            .setColor(defaultcolor)
-            .setDescription("<a:crossmark1:742750308089856022> If you want to create a poll do -poll (message).")
+            .setColor(rederrorcolor)
+            .setDescription("<a:crossmark1:742750308089856022> Please provide poll content.")
 
 
             message.channel.send(poll1);

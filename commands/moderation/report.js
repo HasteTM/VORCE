@@ -10,23 +10,25 @@ module.exports = {
 
         let defaultcolor = `#000000`
 
+        let rederrorcolor = `#c4121b`
+
         const nochannel1 = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find a `#reports` channel")
 
 
         const providereason = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription("<a:crossmark1:742750308089856022> Please provide a reason for the report.")
 
 
         const cantreportthatmember = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription("<a:crossmark1:742750308089856022> Can't report that member.")
 
 
         const couldntfindthatmember = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, are they in the server?")
 
 

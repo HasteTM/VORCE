@@ -10,8 +10,10 @@ module.exports = {
 
     let defaultcolor = `#000000`
 
+    let rederrorcolor = `#c4121b`
+
     const perms1 = new RichEmbed()
-    .setColor(defaultcolor)
+    .setColor(rederrorcolor)
     .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 

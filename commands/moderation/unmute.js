@@ -21,10 +21,14 @@ module.exports = {
     } = message;
 
     let defaultcolor = `#000000`
+
+    let rederrorcolor = `#c4121b`
+
+
     const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
     const notEnoughPermissionEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> You don\'t have permission to use this command.')
 
 
@@ -33,27 +37,27 @@ module.exports = {
     }
 
     const errorEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> There was an error. \nYou have to set up the **mute** command first.\n**-mute generate-role [name]**\n**-mute set-role [role]**')
 
 
     const notMutedEmbed = (user) => new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription(`<a:crossmark1:742750308089856022> That member is not muted.\n**Member:** <@${user}>`)
 
 
     const userNotFoundEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> Couldn\'t find that user.')
 
 
     const noUserEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
 
 
     const couldntUnMute = (user) => new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription(`<a:crossmark1:742750308089856022> I couldn't unmute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
 
 

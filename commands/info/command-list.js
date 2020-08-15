@@ -10,6 +10,10 @@ module.exports = {
 
     run: (client, message, args) => {
 
+        let defaultcolor = `#000000`
+
+        let rederrorcolor = `#c4121b`
+
         message.delete();
 
         if (!message.member.hasPermission("ADMINISTRATOR")) {

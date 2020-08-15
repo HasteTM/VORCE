@@ -9,33 +9,35 @@ module.exports = {
 
     let defaultcolor = `#000000`
 
+    let rederrorcolor = `#c4121b`
+
     const noUserEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> Please provide a person to ban.')
 
 
     const noPermsUserEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 
     const noPermsBotEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> Bot does not have permission to ban members.')
 
 
     const couldntFindMemberEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member.")
 
 
     const cantBanSelfEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription("<a:crossmark1:742750308089856022> You can't ban yourself.")
 
 
     const roleNotHighEnoughEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription("<a:crossmark1:742750308089856022> I can't ban that member due to role hierarchy.")
 
 
