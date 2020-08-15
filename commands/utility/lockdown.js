@@ -28,14 +28,14 @@ module.exports = {
       .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
-      .setDescription('<a:lock:744295873659273258> Locked the channel.');
+      .setDescription('<a:lock:744308512951107604> Locked the channel.');
 
     const unlockEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
-      .setDescription('<a:lock:744295873659273258> Unlocked the channel.');
+      .setDescription('<a:lock:744308512951107604> Unlocked the channel.');
       
 
     if (!isLocked) {
