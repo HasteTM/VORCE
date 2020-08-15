@@ -27,7 +27,6 @@ Third Place Skid: Boner
 Dm Haste to apply.
 *its a joke*
 `)
-.then(m => m.delete(3000));
     }
 
 }
