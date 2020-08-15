@@ -3,11 +3,17 @@ const beautify = require("beautify");
 
 module.exports = {
 name: "eval",
-aliases: ["ev"],
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
 
+     let rederrorcolor = `#c4121b`
      let defaultcolor = `#000000`
+
+     const noPermsUserEmbed = new RichEmbed()
+     .setColor(rederrorcolor)
+     .setDescription("<a:crossmark1:742750308089856022> You don't have access to the eval command.")
+
+
      let evalDudes = [
      "651515978231971900",
      "522895569039917066",
@@ -16,8 +22,8 @@ run: async (client, message, args) => {
      "319516807297892371",
      "709151479918755890", 
      ]
-     if (!evalDudes.includes(msg.author.id)) {
-        return message.channel.send("<a:crossmark1:742750308089856022> You're not a Vorce Admin or a Developer!") 
+     if (!evalDudes.includes(message.author.id)) {
+        return message.channel.send(noPermsUserEmbed) 
         .then(m => m.delete(5000));
     }
 
