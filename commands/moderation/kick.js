@@ -27,7 +27,7 @@ module.exports = {
 
 
     const couldntFindMemberEmbed = new RichEmbed()
-      .setColor(rederrorcolorr)
+      .setColor(rederrorcolor)
       .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member.")
 
 
