@@ -9,18 +9,20 @@ module.exports = {
 
         let defaultcolor = `#000000`
 
+        let rederrorcolor = `#c4121b`
+
         const purge1 = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription(`<a:crossmark1:742750308089856022> You don't have permissions to use this command.`)
 
         
         const purge2 = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription(`<a:crossmark1:742750308089856022> Please enter a number [0 doesn't work].`)
 
         
         const purge3 = new RichEmbed()
-        .setColor(defaultcolor)
+        .setColor(rederrorcolor)
         .setDescription(`<a:crossmark1:742750308089856022> Bot does not have permission to delete/manage messages.`)
 
         

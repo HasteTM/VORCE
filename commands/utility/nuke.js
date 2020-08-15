@@ -7,12 +7,13 @@ module.exports = {
 
     let defaultcolor = `#000000`
 
+    let rederrorcolor = `#c4121b`
+
     const perms1 = new RichEmbed()
-    .setColor(defaultcolor)
+    .setColor(rederrorcolor)
     .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 
-    const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
     const newChannelEmbed = new RichEmbed()
       .setColor('#36393f')
       .setTitle(`<a:checkmark1:742750252666191902> ${message.author.username} Successfully Nuked the Channel.`)

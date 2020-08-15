@@ -12,7 +12,7 @@ module.exports = {
 
         message.delete();
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+        if (message.author.id !== "651515978231971900") {
           }
 
 

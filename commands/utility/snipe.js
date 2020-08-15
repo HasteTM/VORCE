@@ -8,8 +8,9 @@ module.exports = {
 
     let defaultcolor = `#000000`
 
+    let rederrorcolor = `#c4121b`
+
     const { channel } = message;
-    const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
 
     const snipedEmbed = (msg, author, timeStamp) => new RichEmbed()
@@ -18,7 +19,7 @@ module.exports = {
       .setDescription(`Last message:\n**Deleted at:** ${timeStamp}\n**Author:** ${author}\n**Content:** ${msg}`)
 
     const nothingToSnipeEmbed = new RichEmbed()
-      .setColor(defaultcolor)
+      .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> There is nothing to snipe in this channel.');
 
 

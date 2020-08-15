@@ -33,7 +33,6 @@ module.exports = {
         • Uptime: ${duration(client.uptime)}
         `)
         .setTimestamp()
-        .setFooter(`${message.author.username}`, message.author.avatarURL)
         .setColor(defaultcolor)
     message.channel.send(embed);
 

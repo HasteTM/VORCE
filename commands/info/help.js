@@ -24,12 +24,14 @@ module.exports = {
 
         .setColor(defaultcolor)
         .addField('<:work:740255311264350268> | Moderation', '`say` | `purge` | `ban` | `kick` | `unban` | `mute` | `unmute`')
-        .addField('<:botemoji:740338962333302785> | Bot', '`guilds` | `stats` | `invite` | `support` | `botstaff` |')
+        .addField('<:hum:740255276099305472> | Utility','`poll` | `lockdown` | `role` | `announce` | `nuke`| `snipe`')
+        .addField('<:bots:740255859761741836> | Bot', '`guilds` | `stats` | `invite` | `support` | `botstaff` | `eval`')
         .addField('<:bilgi:740317093018468483> |  Info', '`avatar` | `serverinfo` | `userinfo` | `ping` | `help`')
         .addField('<:speak:740255369737273454> | Fun', '`meme` | `rps` | `love` | `gaymeter` | `wiggle` | `weather`')
         .addField('<:music:740255395402219591> | Music', '`play` | `pause` | `skip` | `stop` | `volume` | `queue` | `remove` | `np`')
         .addField('<:hum:740255276099305472> | Utility','`poll` | `lockdown` | `role` | `announce` | `nuke`| `snipe` | `spotify`')
         .addField('<:tickee:740255341408682015> | Badge Documentation','`staff` | `partner` | `bughunter` | `vbdeveloper` | `hypesquadevents` | `earlysupporter`')
+        .addField('<:reddit:744026489229672489> | Reddit', '`anime` | `dogs` | `cats` | `food` | `gaming` | `discordapp` | `programmerhumor` ')
         .setImage('https://media.discordapp.net/attachments/740250432387022859/740257331891142746/A7jrU3CyC7EaAAAAAElFTkSuQmCC.png')
 
         message.author.send(dms)

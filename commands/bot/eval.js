@@ -2,15 +2,28 @@ const { RichEmbed } = require("discord.js");
 const beautify = require("beautify"); 
 
 module.exports = {
-name: "seval",
-aliases: ["se"],
+name: "eval",
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
 
+     let rederrorcolor = `#c4121b`
      let defaultcolor = `#000000`
 
-     if (message.author.id !== "709151479918755890") {
-        return message.channel.send("<a:crossmark1:742750308089856022> You're not a Vorce Admin or a Developer!") 
+     const noPermsUserEmbed = new RichEmbed()
+     .setColor(rederrorcolor)
+     .setDescription("<a:crossmark1:742750308089856022> You don't have access to the eval command.")
+
+
+     let evalDudes = [
+     "651515978231971900",
+     "522895569039917066",
+     "403634335736922132",
+     "522080989057515533",
+     "319516807297892371",
+     "709151479918755890", 
+     ]
+     if (!evalDudes.includes(message.author.id)) {
+        return message.channel.send(noPermsUserEmbed) 
         .then(m => m.delete(5000));
     }
 

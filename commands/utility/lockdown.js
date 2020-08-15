@@ -10,8 +10,10 @@ module.exports = {
 
     let defaultcolor = `#000000`
 
+    let rederrorcolor = `#c4121b`
+
     const perms1 = new RichEmbed()
-    .setColor(defaultcolor)
+    .setColor(rederrorcolor)
     .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 
@@ -26,14 +28,14 @@ module.exports = {
       .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
-      .setDescription('🔒 Locked the channel.');
+      .setDescription('<a:lock:744308512951107604> Locked the channel.');
 
     const unlockEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
-      .setDescription('🔓 Unlocked the channel.');
+      .setDescription('<a:lock:744308512951107604> Unlocked the channel.');
       
 
     if (!isLocked) {
