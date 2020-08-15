@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const MusicBot = require('vorce-music-module');
 const fs = require('fs');
+const isgd = require('isgd');
 const { Client, Collection } = require('discord.js');
 const { config } = require('dotenv');
 const snipeStorage = require('./storage/snipe.json');
@@ -95,3 +96,6 @@ const bot = new MusicBot({
 
 bot.run(); // Run the music module
 client.login(process.env.token);
+
+
+// setinal op.
