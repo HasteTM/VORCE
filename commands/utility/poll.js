@@ -6,7 +6,7 @@ module.exports = {
 
     category: "utility",
 
-    description: "makes a poll",
+    description: "makes a poll.",
 
     run: async (client, message, args) => {
 
