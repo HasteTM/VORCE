@@ -2,7 +2,7 @@ const math = require('mathjs');
 const Discord = require('discord.js');
 
 module.exports = {
-    name: "Calculate",
+    name: "calculate",
     category: "fun",
     description: "Math shit lmfao",
     usage: "calculate",
