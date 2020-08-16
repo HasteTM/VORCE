@@ -19,8 +19,8 @@ module.exports = {
         if(!poll) {
             
             const poll1 = new RichEmbed()
-            .setColor(rederrorcolor)
-            .setDescription("<a:crossmark1:742750308089856022> Please provide poll content.")
+            .setColor("7dfce9")
+            .setDescription("<:cancel:744610141588160562> Please provide poll content.")
 
 
             message.channel.send(poll1);
@@ -28,7 +28,7 @@ module.exports = {
 
         } else {
             const poll2 = new RichEmbed()
-            .setColor(defaultcolor)
+            .setColor("fba6ff")
             .setAuthor('Poll')
             .setDescription(`${poll}`)
             .setTimestamp()
