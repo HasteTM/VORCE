@@ -7,23 +7,23 @@ module.exports = {
     description: "Clears the chat",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#c4121b`
+        let rederrorcolor = `#fba6ff`
 
         const purge1 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription(`<a:crossmark1:742750308089856022> You don't have permissions to use this command.`)
+        .setDescription(`<:cancel:744610141588160562> You don't have permissions to use this command.`)
 
         
         const purge2 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription(`<a:crossmark1:742750308089856022> Please enter a number [0 doesn't work].`)
+        .setDescription(`<:cancel:744610141588160562> Please enter a number [0 doesn't work].`)
 
         
         const purge3 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription(`<a:crossmark1:742750308089856022> Bot does not have permission to delete/manage messages.`)
+        .setDescription(`<:cancel:744610141588160562> Bot does not have permission to delete/manage messages.`)
 
         
         
