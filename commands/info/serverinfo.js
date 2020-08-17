@@ -9,7 +9,7 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
 
         function checkDays(date) {
             let now = new Date();
