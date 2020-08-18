@@ -31,7 +31,7 @@ module.exports = {
         .addField('<:music:740255395402219591> | Music', '`play` | `pause` | `skip` | `stop` | `volume` | `queue` | `remove` | `np`')
         .addField('<:hum:740255276099305472> | Utility','`poll` | `lockdown` | `role` | `announce` | `nuke`| `snipe`')
         .addField('<:tickee:740255341408682015> | Badge Documentation','`staff` | `partner` | `bughunter` | `vbdeveloper` | `hypesquadevents` | `earlysupporter`')
-        .addField('<:reddit:744026489229672489> | Reddit', '`anime` | `dogs` | `cats` | `food` | `gaming` | `discordapp` | `programmerhumor` ')
+        .addField('<:reddit:744026489229672489> | Reddit', '`anime` | `dogs` | `cats` | `food` | `gaming` | `discordapp` | `programmerhumor` | `corsair` | `logitech` | `razer` | `tech` ')
         .setImage('https://media.discordapp.net/attachments/740250432387022859/740257331891142746/A7jrU3CyC7EaAAAAAElFTkSuQmCC.png')
 
         message.author.send(dms)
