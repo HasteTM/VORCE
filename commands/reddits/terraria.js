@@ -7,7 +7,7 @@ module.exports = {
     description: "Sends a random picture from the given subreddit",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
 
         const subReddits = ["Terraria"];
 

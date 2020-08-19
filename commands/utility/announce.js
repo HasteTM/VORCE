@@ -6,9 +6,9 @@ module.exports = {
     usage: "<input>",
     run: (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#c4121b`
+        let rederrorcolor = `#fba6ff`
 
         message.delete();
 

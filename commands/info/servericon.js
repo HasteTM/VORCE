@@ -7,7 +7,7 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
 
 
 

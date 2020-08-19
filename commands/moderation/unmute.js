@@ -63,7 +63,7 @@ module.exports = {
 
     const successUnMute = (user) => new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription(`<a:checkmark1:742750252666191902> Successfully unmuted that member.\n**Member:** <@${user}>`)
+      .setDescription(`<:checkmark:744610141566926888> Successfully unmuted that member.\n**Member:** <@${user}>`)
 
 
     if (!muteStorage[guild.id]) {

@@ -2,14 +2,14 @@ const { RichEmbed } = require("discord.js");
 const randomPuppy = require("random-puppy");
 
 module.exports = {
-    name: "discordapp",
+    name: "Tech",
     category: "reddits",
     description: "Sends a random picture from the given subreddit",
     run: async (client, message, args) => {
 
         let defaultcolor = `#7dfce9`
 
-        const subReddits = ["discordapp"];
+        const subReddits = ["Tech"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
@@ -17,7 +17,7 @@ module.exports = {
         const embed = new RichEmbed()
             .setColor(defaultcolor)
             .setImage(img)
-            .setAuthor('DiscordApp')
+            .setAuthor('Tech')
             .setTitle(`From /r/${random}`)
             .setURL(`https://reddit.com/r/${random}`);
 
