@@ -9,15 +9,18 @@ module.exports = {
 
     name: "userinfo",
 
-    aliases: "whois",
-
     description: "Returns user information",
 
     usage: "[username | id | mention]",
 
     run: (client, message, args) => {
 
+
+
         let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
+
 
         const member = getMember(message, args.join(" "));
 
@@ -52,7 +55,6 @@ module.exports = {
              Tag: ${member.user.tag}
 
              Created at: ${created}`, true)
-
 
         if (member.user.presence.game) 
 

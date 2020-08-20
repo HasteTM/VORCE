@@ -5,9 +5,13 @@ module.exports = {
     description: "Returns latency and API ping",
     run: async (client, message, args) => {
 
+
       let defaultcolor = `#7dfce9`
 
-          const msg = await message.channel.send(`🏓 Pinging....`);
+      let rederrorcolor = `#fba6ff`
+
+
+          const msg = await message.channel.send(`Pinging...`);
           let pembed = new Discord.RichEmbed()
           .setColor(defaultcolor)
           .setTitle("🏓 Pong!")

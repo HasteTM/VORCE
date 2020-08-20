@@ -10,7 +10,9 @@ module.exports = {
     usage: "rps",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
 
         const embed = new RichEmbed()
             .setColor(defaultcolor)

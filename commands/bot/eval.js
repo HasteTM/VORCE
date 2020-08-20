@@ -6,12 +6,13 @@ name: "eval",
 description: "Evaluates the code you put in", usage: "<code to eval>",
 run: async (client, message, args) => {
 
-     let rederrorcolor = `#c4121b`
-     let defaultcolor = `#000000`
+     let defaultcolor = `#7dfce9`
+
+     let rederrorcolor = `#fba6ff`
 
      const noPermsUserEmbed = new RichEmbed()
      .setColor(rederrorcolor)
-     .setDescription("<a:crossmark1:742750308089856022> You don't have access to the eval command.")
+     .setDescription("<a:crossmark1:742750308089856022> You don't have access to this command.")
 
 
      let evalDudes = [

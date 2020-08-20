@@ -9,7 +9,9 @@ module.exports = {
     usage: "[mention | id | username]",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
 
         // Get a member from mention, id, or username
         let person = getMember(message, args[0]);

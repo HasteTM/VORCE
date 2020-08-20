@@ -6,9 +6,11 @@ module.exports = {
     usage: "<input>",
     run: (client, message, args) => {
 
+
         let defaultcolor = `#7dfce9`
 
         let rederrorcolor = `#fba6ff`
+
 
         message.delete();
 
@@ -21,11 +23,11 @@ module.exports = {
 
         const say1 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> You don't have permission to use this command.")
+        .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
         const say2 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> Please provide a message for me to announce!")
+        .setDescription("<a:crossmark1:742750308089856022> Please provide a message for me to announce!")
 
 
         if (!message.member.hasPermission("ADMINISTRATOR"))

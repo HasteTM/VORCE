@@ -3,13 +3,13 @@ module.exports = {
 
     name: "serverinfo",
 
-    aliases: "sinfo",
-
     description: "Returns Bot information",
 
     run: (client, message, args) => {
 
         let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
 
         function checkDays(date) {
             let now = new Date();

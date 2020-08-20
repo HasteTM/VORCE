@@ -13,47 +13,27 @@ module.exports = {
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> Please provide a person to ban.')
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
-
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a person to ban.')
 
     const noPermsUserEmbed = new RichEmbed()
-    .setTitle("Ban")
       .setColor(rederrorcolor)
-      .setDescription("<:cancel:744610141588160562> You don't have permission to use this command.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
     const noPermsBotEmbed = new RichEmbed()
-    .setTitle("Ban")
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> Bot does not have permission to ban members.')
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription('<a:crossmark1:742750308089856022> Bot does not have permission to ban members.')
 
     const couldntFindMemberEmbed = new RichEmbed()
-    .setTitle("Ban")
       .setColor(rederrorcolor)
-      .setDescription("<:cancel:744610141588160562> Couldn't find that member.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
-
+      .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member.")
 
     const cantBanSelfEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription("<:cancel:744610141588160562> You can't ban yourself.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
-
+      .setDescription("<a:crossmark1:742750308089856022> You can't ban yourself.")
 
     const roleNotHighEnoughEmbed = new RichEmbed()
-      .setTitle("Ban")
       .setColor(rederrorcolor)
-      .setDescription("<:cancel:744610141588160562> I can't ban that member due to role hierarchy.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
-
+      .setDescription("<a:crossmark1:742750308089856022> I can't ban that member due to role hierarchy.")
 
     const [user] = args;
 
@@ -77,7 +57,6 @@ module.exports = {
     if (!toBan) {
       return message.channel.send(couldntFindMemberEmbed)
 
-
     }
 
     if (toBan.id === message.author.id) {
@@ -91,8 +70,7 @@ module.exports = {
     }
 
     const successBanEmbed = new RichEmbed()
-      .setAuthor('Ban')
-      .setColor('#7dfce9')
+      .setColor(defaultcolor)
       .setDescription(`** Banned member:** ${toBan}
             ** Banned by:** ${message.member}
             ** Reason:** ${args.join(' ') || 'No reason provided.'}`);

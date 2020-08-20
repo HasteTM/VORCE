@@ -9,7 +9,9 @@ module.exports = {
 
     run: (client, message, args) => {
 
-      let defaultcolor = `#000000`
+      let defaultcolor = `#7dfce9`
+
+      let rederrorcolor = `#fba6ff`
 
       // const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
       function duration(ms) {

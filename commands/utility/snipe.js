@@ -6,9 +6,11 @@ module.exports = {
   description: 'Displays the last deleted message.',
   run: (client, message) => {
 
+
     let defaultcolor = `#7dfce9`
 
     let rederrorcolor = `#fba6ff`
+
 
     const { channel } = message;
 
@@ -20,7 +22,7 @@ module.exports = {
 
     const nothingToSnipeEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> There is nothing to snipe in this channel.');
+      .setDescription('<a:crossmark1:742750308089856022> There is nothing to snipe in this channel.');
 
 
     const channelID = message.channel.id;

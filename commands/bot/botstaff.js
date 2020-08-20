@@ -9,14 +9,16 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
 
         const embed = new RichEmbed()
         .setColor(defaultcolor)
         .setAuthor('Botstaff')
-        .addField('Founder', '<@651515978231971900>, <@709151479918755890>')
+        .addField('Founders', '<@651515978231971900>, <@709151479918755890>')
         .addField('Developers',' <@522080989057515533>,  <@319516807297892371>, <@709523716333109369>')
-        .addField('Bot Admins', '<@403634335736922132>,  <@698306752508198972>,  <@642462432643514368>,  <@720396300012617869>,  <@522895569039917066>')
+        .addField('Bot Admins', '<@403634335736922132>,  <@698306752508198972>,  <@642462432643514368>,  <@720396300012617869>,  <@522895569039917066>,  <@718929628445540362>')
         message.channel.send(embed);
 
     }

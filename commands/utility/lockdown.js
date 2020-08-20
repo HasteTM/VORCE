@@ -8,13 +8,15 @@ module.exports = {
   description: 'Locks the current channel.',
   run: (client, message) => {
 
+
     let defaultcolor = `#7dfce9`
 
     let rederrorcolor = `#fba6ff`
 
+
     const perms1 = new RichEmbed()
     .setColor(rederrorcolor)
-    .setDescription("<:cancel:744610141588160562> You don't have permission to use this command.")
+    .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 
     if (!message.member.hasPermission('ADMINISTRATOR')) {
@@ -28,14 +30,14 @@ module.exports = {
       .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
-      .setDescription('<:security:744610141592092684> Locked the channel.');
+      .setDescription('<a:check1:724756573896966235> Locked the channel.');
 
     const unlockEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Lockdown')
       .setFooter(message.author.username, message.author.displayAvatarURL)
       .setTimestamp()
-      .setDescription('<:security:744610141592092684> Unlocked the channel.');
+      .setDescription('<a:check1:724756573896966235> Unlocked the channel.');
       
 
     if (!isLocked) {

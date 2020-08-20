@@ -7,7 +7,9 @@ module.exports = {
     description: "Sends an epic meme",
     run: async (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
 
         const subReddits = ["dankmeme", "meme", "me_irl", "memes", "dankmemes"];
 

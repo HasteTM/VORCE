@@ -20,16 +20,18 @@ module.exports = {
       mentions,
     } = message;
 
+
     let defaultcolor = `#7dfce9`
 
     let rederrorcolor = `#fba6ff`
+
 
 
     const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
     const notEnoughPermissionEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> You don\'t have permission to use this command.')
+      .setDescription('<a:crossmark1:742750308089856022> You don\'t have permission to use this command.')
 
 
     if (!(member.hasPermission('ADMINISTRATOR') || member.hasPermission('MANAGE_MEMBERS'))) {
@@ -38,32 +40,32 @@ module.exports = {
 
     const errorEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> There was an error. \nYou have to set up the **mute** command first.\n**-mute generate-role [name]**\n**-mute set-role [role]**')
+      .setDescription('<a:crossmark1:742750308089856022> There was an error. \nYou have to set up the **mute** command first.\n**-mute generate-role [name]**\n**-mute set-role [role]**')
 
 
     const notMutedEmbed = (user) => new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription(`<:cancel:744610141588160562> That member is not muted.\n**Member:** <@${user}>`)
+      .setDescription(`<a:crossmark1:742750308089856022> That member is not muted.\n**Member:** <@${user}>`)
 
 
     const userNotFoundEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> Couldn\'t find that user.')
+      .setDescription('<a:crossmark1:742750308089856022> Couldn\'t find that user.')
 
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> You need to mention a member to mute.')
+      .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
 
 
     const couldntUnMute = (user) => new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription(`<:cancel:744610141588160562> I couldn't unmute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
+      .setDescription(`<a:crossmark1:742750308089856022> I couldn't unmute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
 
 
     const successUnMute = (user) => new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription(`<:checkmark:744610141566926888> Successfully unmuted that member.\n**Member:** <@${user}>`)
+      .setDescription(`<a:check1:724756573896966235> Successfully unmuted that member.\n**Member:** <@${user}>`)
 
 
     if (!muteStorage[guild.id]) {

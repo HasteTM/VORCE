@@ -10,7 +10,9 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        let defaultcolor = `#000000`
+        let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
 
         const embed = new RichEmbed()
 // need to push new update with rgb theme

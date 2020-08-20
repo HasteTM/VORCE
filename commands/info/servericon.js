@@ -9,8 +9,7 @@ module.exports = {
 
         let defaultcolor = `#7dfce9`
 
-
-
+        let rederrorcolor = `#fba6ff`
 
         const embed = new Discord.RichEmbed()
             .setColor(defaultcolor)

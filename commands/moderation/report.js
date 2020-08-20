@@ -8,28 +8,30 @@ module.exports = {
     usage: "<mention, id>",
     run: async (client, message, args) => {
 
+
         let defaultcolor = `#7dfce9`
 
         let rederrorcolor = `#fba6ff`
 
+
         const nochannel1 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> Couldn't find a `#reports` channel")
+        .setDescription("<a:crossmark1:742750308089856022> Couldn't find a `#reports` channel")
 
 
         const providereason = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> Please provide a reason for the report.")
+        .setDescription("<a:crossmark1:742750308089856022> Please provide a reason for the report.")
 
 
         const cantreportthatmember = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> Can't report that member.")
+        .setDescription("<a:crossmark1:742750308089856022> Can't report that member.")
 
 
         const couldntfindthatmember = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> Couldn't find that member, are they in the server?")
+        .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member, are they in the server?")
 
 
 

@@ -10,9 +10,11 @@ module.exports = {
 
     run: (client, message, args) => {
 
+
         let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#c4121b`
+        let rederrorcolor = `#fba6ff`
+
 
         message.delete();
 

@@ -9,6 +9,9 @@ module.exports = {
 
         let defaultcolor = `#7dfce9`
 
+        let rederrorcolor = `#fba6ff`
+
+
         const subReddits = ["ProgrammerHumor"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];

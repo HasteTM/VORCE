@@ -10,16 +10,17 @@ module.exports = {
 
         let rederrorcolor = `#fba6ff`
 
+
         message.delete();
 
         const say1 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> You don't have permissions to use this command.")
+        .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
 
         const say2 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription("<:cancel:744610141588160562> Please provide a message for me to say!")
+        .setDescription("<a:crossmark1:742750308089856022> Please provide a message for me to say!")
 
         if (!message.member.hasPermission("ADMINISTRATOR"))
             return message.channel.send(say1)

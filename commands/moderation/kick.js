@@ -7,52 +7,34 @@ module.exports = {
   usage: '<id | mention>',
 
   run: async (client, message, args) => {
+
     let defaultcolor = `#7dfce9`
 
     let rederrorcolor = `#fba6ff`
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setTitle("Kick")
-      .setDescription('<:cancel:744610141588160562> Please provide a person to kick.')
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a person to kick.')
 
     const noPermsUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setTitle("Kick")
-      .setDescription("<:cancel:744610141588160562> You don't have permission to use this command.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
     const noPermsBotEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setTitle("Kick")
-      .setDescription('<:cancel:744610141588160562> Bot does not have permission to kick members.')
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription('<a:crossmark1:742750308089856022> Bot does not have permission to kick members.')
 
     const couldntFindMemberEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setTitle("Kick")
-      .setDescription("<:cancel:744610141588160562> Couldn't find that member.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription("<a:crossmark1:742750308089856022> Couldn't find that member.")
 
     const cantKickSelfEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setTitle("Kick")
-      .setDescription("<:cancel:744610141588160562> You can't kick yourself.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
+      .setDescription("<a:crossmark1:742750308089856022> You can't kick yourself.")
 
     const roleNotHighEnoughEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setTitle("Kick")
-      .setDescription("<:cancel:744610141588160562> I can't kick that member due to role hierarchy.")
-      .setTimestamp()
-      .setFooter(`${message.author.username}`, message.author.avatarURL)
-
+      .setDescription("<a:crossmark1:742750308089856022> I can't kick that member due to role hierarchy.")
 
       const [user] = args;
 
@@ -90,7 +72,6 @@ module.exports = {
     }
 
     const successKickEmbed = new RichEmbed()
-      .setAuthor('Kick')
       .setColor(defaultcolor)
       .setDescription(`** Kicked member:** ${toKick}
             ** Kicked by:** ${message.member}

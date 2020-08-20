@@ -1,25 +1,43 @@
 const math = require('mathjs');
 const Discord = require('discord.js');
+const { RichEmbed } = require("discord.js");
 
 module.exports = {
-    name: "calculate",
-    category: "fun",
-    description: "Math shit lmfao",
-    usage: "calculate",
-    run: async (client, message, args, tools) => {
-        if (!args[0]) return message.channel.send('Please input a calculation.');
-        let resp;
-        try {
-            resp = math.eval(args.join(' '));
-        } catch (e) {
-            return message.channel.send('Sorry, please input a valid calculation.');
-        }
 
-        const embed = new Discord.RichEmbed()
-            .setrColor(0xfffff)
-            .setTitle("Vorce - Math Caluclations")
-            .addField('Input', `\`\`\`js\n${args.join('')}\`\`\``)
-            .addField('Output', `\`\`\`js\n${resp}\`\`\``)
-        message.channel.send(embed);
+    name: "calculate",
+
+    description: "calculator command",
+
+    run: (client, message, args) => {
+
+        let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
+
+    if(!args[0]) return message.channel.send(cmsg1);
+
+    let resp;
+
+    try {
+        resp = math.evaluate(args.join(' '))
+    } catch(e) {
+        return message.channel.send(cmsg2)
     }
+
+    const cmsg1 = new RichEmbed()
+    .setColor(rederrorcolor)
+    .setDescription('Please provide a equation.')
+
+    const cmsg2 = new RichEmbed()
+    .setColor(rederrorcolor)
+    .setDescription('Please provide a __VALID__ equation.')
+
+    const cmsg3 = new RichEmbed()
+    .setColor(defaultcolor)
+    .setAuthor('Calculate')
+    .addField(`Question`, `\`\`\`css\n${args.join(' ')}\`\`\``)
+    .addField(`Answer`, `\`\`\`css\n${resp}\`\`\``)
+
+    message.channel.send(cmsg3);
+}
 }

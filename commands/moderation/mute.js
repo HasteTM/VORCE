@@ -20,15 +20,14 @@ module.exports = {
       mentions,
     } = message;
 
-    let defaultcolor = `#000000`
 
-    let rederrorcolor = `#c4121b`
+    let defaultcolor = `#7dfce9`
 
-    const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
+    let rederrorcolor = `#fba6ff`
 
     const notEnoughPermissionEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> You don\'t have permission to use this command.')
+      .setDescription('<a:crossmark1:742750308089856022> You don\'t have permission to use this command.')
 
 
     if (!(member.hasPermission('ADMINISTRATOR') || member.hasPermission('MANAGE_MEMBERS'))) {
@@ -37,52 +36,52 @@ module.exports = {
 
     const unknownError = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> An unknown error occured.')
+      .setDescription('<a:crossmark1:742750308089856022> An unknown error occured.')
 
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> You need to mention a member to mute.')
+      .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
 
 
     const errorEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> There was an error. Command usage:\n**-mute generate-role [name]**\n**-mute set-role [role]**\n**-mute [user]**')
+      .setDescription('<a:crossmark1:742750308089856022> There was an error. Command usage:\n**-mute generate-role [name]**\n**-mute set-role [role]**\n**-mute [user]**')
 
 
     const roleNotFound = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<:cancel:744610141588160562> Coudln\'t find that role.')
+      .setDescription('<a:crossmark1:742750308089856022> Coudln\'t find that role.')
 
 
     const setRoleFirst = new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription('<:cancel:744610141588160562> You have to set a mute role with **-mute set-role [role]** first.')
+      .setDescription('<a:crossmark1:742750308089856022> You have to set a mute role with **-mute set-role [role]** first.')
 
 
     const couldntMute = (user) => new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription(`<:cancel:744610141588160562> I couldn't mute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
+      .setDescription(`<a:crossmark1:742750308089856022> I couldn't mute that member. Make sure my role is high enough.\n**Member:** <@${user}>`)
 
 
     const successMute = (user) => new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription(`<:checkmark:744610141566926888> Successfully muted that member.\n**Member:** <@${user}>`)
+      .setDescription(`<a:check1:724756573896966235> Successfully muted that member.\n**Member:** <@${user}>`)
 
 
     const generatedSuccessEmbed = (role) => new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription(`<:checkmark:744610141566926888> Successfully generated a mute role with the name <@&${role}>`)
+      .setDescription(`<a:check1:724756573896966235> Successfully generated a mute role with the name <@&${role}>`)
  
 
     const successSetRole = (role) => new RichEmbed()
       .setColor(defaultcolor)
-      .setDescription(`<:checkmark:744610141566926888> The guild's mute role is now: <@&${role}>`)
+      .setDescription(`<a:check1:724756573896966235> The guild's mute role is now: <@&${role}>`)
 
 
     const alreadyMuted = (user) => new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription(`<:cancel:744610141588160562> That member is already muted.\n**Member:** <@${user}>`)
+      .setDescription(`<a:check1:724756573896966235> That member is already muted.\n**Member:** <@${user}>`)
 
 
     const [firstArg] = args;

@@ -7,7 +7,11 @@ module.exports = {
     description: "Sends a random picture from the given subreddit",
     run: async (client, message, args) => {
 
+
         let defaultcolor = `#7dfce9`
+
+        let rederrorcolor = `#fba6ff`
+
 
         const subReddits = ["discordapp"];
 

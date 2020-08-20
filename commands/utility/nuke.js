@@ -5,19 +5,20 @@ module.exports = {
   description: 'Nukes the current channel.',
   run: (client, message) => {
 
+
     let defaultcolor = `#7dfce9`
 
     let rederrorcolor = `#fba6ff`
 
     const perms1 = new RichEmbed()
     .setColor(rederrorcolor)
-    .setDescription("<:cancel:744610141588160562> You don't have permission to use this command.")
+    .setDescription("<a:crossmark1:742750308089856022> You don't have permission to use this command.")
 
-
-    const newChannelEmbed = new RichEmbed()
-      .setColor('#36393f')
-      .setTitle(`<:checkmark:744610141566926888> ${message.author.username} Successfully Nuked the Channel.`)
-      .setImage('https://cdn.discordapp.com/attachments/651589704772485131/741823383955832883/SHKS.gif')
+    const nuke1 = new RichEmbed()
+    .setColor(defaultcolor)
+    .setDescription(`<a:check1:724756573896966235> Successfully Nuked the Channel.`)
+    .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
 
     if (!(message.member.hasPermission('ADMINISTRATOR') || message.member.hasPermission('MANAGE_CHANNELS'))) {
         return message.channel.send(perms1)
@@ -27,7 +28,7 @@ module.exports = {
 
     const handleResolvedChannel = (channel) => {
       channel.setPosition(lastTextChannelPos);
-      channel.send(newChannelEmbed);
+      channel.send(nuke1);
     }
 
     textChannel.clone().then(handleResolvedChannel).catch(e => console.log(e));
