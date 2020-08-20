@@ -21,7 +21,7 @@ module.exports = {
 
         urban(word).first(json => {
             if (!json) {
-                return message.channel.send('No such word exist!');
+                return message.channel.send('No such word exists!');
             }
             console.log(json);
             const embed1 = new RichEmbed()
