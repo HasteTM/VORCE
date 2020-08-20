@@ -5,8 +5,6 @@ const { stripIndents } = require("common-tags");
 
 const { getMember, formatDate } = require("../../functions.js");
 
-
-
 module.exports = {
 
     name: "avatar",
@@ -23,7 +21,6 @@ module.exports = {
         let defaultcolor = `#7dfce9`
 
         let rederrorcolor = `#fba6ff`
-
 
         const member = getMember(message, args.join(" "));
 
