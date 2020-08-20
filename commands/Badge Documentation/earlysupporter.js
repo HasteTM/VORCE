@@ -4,7 +4,7 @@ const { RichEmbed } = require("discord.js");
 
 module.exports = {
 
-    name: "earlysupporter",
+    name: "esupporter",
 
     description: "Returns Bot information",
 
