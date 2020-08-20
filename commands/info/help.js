@@ -30,7 +30,7 @@ module.exports = {
         .addField('<:utility:744610141411737710> | Utility','`poll` | `lockdown` | `role` | `announce` | `nuke`| `snipe` | `giveaway`')
         .addField('<:verified22:744610141512532008> | Bot', '`guilds` | `stats` | `invite` | `support` | `botstaff` | `eval`')
         .addField('<:search:744610141571383306> |  Info', '`avatar` | `serverinfo` | `userinfo` | `ping` | `help`')
-        .addField('<:crown:744928212458536972> | Fun', '`meme` | `rps` | `love` | `weather` | `coinflip` | `calculate` |`8ball`')
+        .addField('<:crown:744928212458536972> | Fun', '`meme` | `rps` | `love` | `weather` | `imdb` | `coinflip` | `calculate` |`8ball`')
         .addField('<:music:744928360047706202> | Music', '`play` | `pause` | `skip` | `stop` | `volume` | `queue` | `remove` | `np`')
         .addField('<:nsfw1:746133440294027384> | NSFW', '`4k` | `gif`| `anal` | `ass` | `pussy` | `hentai` | `thigh` | `holo`')
         .addField('<:arrowright:744928707847913554> | Badge Documentation','`staff` | `partner` | `bughunter` | `vbdeveloper` | `hsevents` | `esupporter`')

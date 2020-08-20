@@ -23,7 +23,7 @@ module.exports = {
         
         const purge3 = new RichEmbed()
         .setColor(rederrorcolor)
-        .setDescription(`<a:crossmark1:742750308089856022> Bot does not have permission to delete/manage messages.`)
+        .setDescription(`<a:crossmark1:742750308089856022> Bot does not have permission to delete / manage messages.`)
 
         if (message.deletable) {
             message.delete();
