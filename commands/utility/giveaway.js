@@ -18,15 +18,15 @@ module.exports = {
         
     const g1 = new RichEmbed()
     .setColor(rederrorcolor)
-    .setDescription("<a:crossmark1:742750308089856022> You didn't specify a time! `Example: -giveaway 1m/h/d #channelname nameofprize`")
+    .setDescription("<a:crossmark1:742750308089856022> You didn't specify a time! \n`Example: -giveaway 1m/h/d #channelname nameofprize`")
 
     const g2 = new RichEmbed()
     .setColor(rederrorcolor)
-    .setDescription("<a:crossmark1:742750308089856022> You didn't use the correct formatting for the time! `Example: -giveaway 1m/h/d #channelname nameofprize`")
+    .setDescription("<a:crossmark1:742750308089856022> You didn't use the correct formatting for the time! \n`Example: -giveaway 1m/h/d #channelname nameofprize`")
 
     const g3 = new RichEmbed()
     .setColor(rederrorcolor)
-    .setDescription('<a:crossmark1:742750308089856022> That is not a number! `Example: -giveaway 1m/h/d #channelname nameofprize`')
+    .setDescription('<a:crossmark1:742750308089856022> That is not a number! \n`Example: -giveaway 1m/h/d #channelname nameofprize`')
 
     const g4 = new RichEmbed()
     .setColor(rederrorcolor)
