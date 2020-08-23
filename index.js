@@ -7,6 +7,7 @@ const { Client, Collection } = require('discord.js');
 const { config } = require('dotenv');
 const snipeStorage = require('./storage/snipe.json');
 const muteStorage = require('./storage/mute.json');
+const blacklist = require('./storage/blacklist.json');
 
 const client = new Client({
   disableEveryone: true,
@@ -44,6 +45,10 @@ client.on('message', async (message) => {
     const dmEmbed = new Discord.RichEmbed()
       .setFooter(`${message.author.username}#${message.author.discriminator}: ${message.content}`, message.author.avatarURL);
     client.channels.get('740001399877795921').send(dmEmbed);
+  }
+
+  if (blacklist.guilds.includes(message.guild.id) && !message.member.hasPermission('ADMINISTRATOR', false, true, true)) {
+    return;
   }
   const prefix = '-';
 

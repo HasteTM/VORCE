@@ -24,7 +24,6 @@ module.exports = {
 
     }
 
-
     const lockEmbed = new RichEmbed()
       .setColor(defaultcolor)
       .setAuthor('Lockdown')

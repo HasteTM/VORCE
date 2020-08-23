@@ -12,7 +12,6 @@ module.exports = {
 
         let rederrorcolor = `#fba6ff`
 
-
         const subReddits = ["FORTnITE"];
 
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
