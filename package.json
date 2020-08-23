@@ -1,5 +1,5 @@
 {
-  "name": "ascendency",
+  "name": "vorce",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Entety101/MY-HEROKU-HOSTED-BOT.git"
+    "url": "git+https://github.com/Entety101/Vorce.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Entety101/MY-HEROKU-HOSTED-BOT/issues"
+    "url": "https://github.com/Entety101/Vorce/issues"
   },
-  "homepage": "https://github.com/Entety101/MY-HEROKU-HOSTED-BOT#readme"
+  "homepage": "https://github.com/Entety101/Vorce#readme"
 }
