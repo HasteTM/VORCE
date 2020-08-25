@@ -11,7 +11,6 @@ module.exports = {
 
     run: (client, message, args) => {
 
-        message.delete()
 
         let defaultcolor = `#7dfce9`
 
