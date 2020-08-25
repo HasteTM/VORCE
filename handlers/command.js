@@ -16,8 +16,6 @@ module.exports = (client) => {
 
     readdirSync("./commands/").forEach(dir => {
 
-        // Filter so we only have .js command files
-
         const commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith(".js"));
 
     

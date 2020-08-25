@@ -11,7 +11,7 @@ module.exports = {
 
       let defaultcolor = `#7dfce9`
 
-      let rederrorcolor = `#fba6ff`
+      let rederrorcolor = `#F04947`
 
       // const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
       function duration(ms) {

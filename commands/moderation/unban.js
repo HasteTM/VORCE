@@ -12,14 +12,14 @@ module.exports = {
 
     let defaultcolor = `#7dfce9`
 
-    let rederrorcolor = `#fba6ff`
+    let rederrorcolor = `#F04947`
 
 
     const { channel } = message;
 
     const noUserIDEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<a:crossmark1:742750308089856022> Please provide a user to unban!')
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a member to unban!')
 
     const userNoPermissionEmbed = new RichEmbed()
       .setColor(rederrorcolor)

@@ -17,7 +17,7 @@ module.exports = {
 
 
 
-        let defaultcolor = `#7dfce9`
+        let defaultcolor = `#F04947`
 
         let rederrorcolor = `#fba6ff`
 

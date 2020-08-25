@@ -8,7 +8,7 @@ run: async (client, message, args) => {
 
      let defaultcolor = `#7dfce9`
 
-     let rederrorcolor = `#fba6ff`
+     let rederrorcolor = `#F04947`
 
      const noPermsUserEmbed = new RichEmbed()
      .setColor(rederrorcolor)

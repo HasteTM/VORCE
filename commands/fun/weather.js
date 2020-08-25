@@ -12,7 +12,7 @@ module.exports = {
 
         let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#fba6ff`
+        let rederrorcolor = `#F04947`
 
         weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
             if(err) message.channel.send(err)

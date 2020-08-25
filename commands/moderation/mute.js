@@ -23,7 +23,7 @@ module.exports = {
 
     let defaultcolor = `#7dfce9`
 
-    let rederrorcolor = `#fba6ff`
+    let rederrorcolor = `#F04947`
 
     const notEnoughPermissionEmbed = new RichEmbed()
       .setColor(rederrorcolor)
@@ -41,7 +41,7 @@ module.exports = {
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a member to mute.')
 
 
     const errorEmbed = new RichEmbed()

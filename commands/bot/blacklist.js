@@ -7,7 +7,7 @@ module.exports = {
   description: 'Adds or removes a guild to the bot blacklist.',
   run: (client, message) => {
     const defaultcolor = '#7dfce9';
-    const rederrorcolor = '#fba6ff';
+    const rederrorcolor = '#F04947';
     const notEnoughPermission = new RichEmbed()
       .setColor(rederrorcolor)
       .setDescription('<a:crossmark1:742750308089856022> You don\'t have permission to use this command.');

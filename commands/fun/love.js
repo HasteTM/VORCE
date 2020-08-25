@@ -11,7 +11,7 @@ module.exports = {
 
         let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#fba6ff`
+        let rederrorcolor = `#F04947`
 
         // Get a member from mention, id, or username
         let person = getMember(message, args[0]);

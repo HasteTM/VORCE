@@ -9,7 +9,7 @@ module.exports = {
 
         let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#fba6ff`
+        let rederrorcolor = `#F04947`
 
         const purge1 = new RichEmbed()
         .setColor(rederrorcolor)

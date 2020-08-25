@@ -23,11 +23,8 @@ module.exports = {
 
     let defaultcolor = `#7dfce9`
 
-    let rederrorcolor = `#fba6ff`
+    let rederrorcolor = `#F04947`
 
-
-
-    const authorLogo = 'https://media.discordapp.net/attachments/651589704772485131/740315645106978876/hum.png';
 
     const notEnoughPermissionEmbed = new RichEmbed()
       .setColor(rederrorcolor)
@@ -55,7 +52,7 @@ module.exports = {
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<a:crossmark1:742750308089856022> You need to mention a member to mute.')
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a member to unmute.')
 
 
     const couldntUnMute = (user) => new RichEmbed()

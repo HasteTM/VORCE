@@ -9,11 +9,11 @@ module.exports = {
 
     let defaultcolor = `#7dfce9`
 
-    let rederrorcolor = `#fba6ff`
+    let rederrorcolor = `#F04947`
 
     const noUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)
-      .setDescription('<a:crossmark1:742750308089856022> Please provide a person to ban.')
+      .setDescription('<a:crossmark1:742750308089856022> Please provide a member to ban.')
 
     const noPermsUserEmbed = new RichEmbed()
       .setColor(rederrorcolor)

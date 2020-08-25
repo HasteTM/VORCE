@@ -10,15 +10,15 @@ module.exports = {
 
         let defaultcolor = `#7dfce9`
 
-        let rederrorcolor = `#fba6ff`
+        let rederrorcolor = `#F04947`
 
         const cmsg1 = new RichEmbed()
-        .setColor(rederrorcolor)
+        .setColor(defaultcolor)
         .setAuthor('CoinFlip')
         .setDescription('<a:coinflip2:746102229416542309> Heads!')
 
         const cmsg2 = new RichEmbed()
-        .setColor(rederrorcolor)
+        .setColor(defaultcolor)
         .setAuthor('CoinFlip')
         .setDescription('<a:coinflip2:746102229416542309> Tails!')
 
